@@ -44,6 +44,7 @@ func load_game() -> bool:
 		if not d.has("rpg"):rpg=preload("res://systems/rules.gd").new().defaults()
 		for key in snapshot():
 			if key != "schema" and d.has(key): set(key, d[key])
+		if not rpg.has("enrichment"):rpg.enrichment={"choices":{},"trials":[],"seen":[]}
 		land = clampi(land, 0, 2)
 		return true
 	return false

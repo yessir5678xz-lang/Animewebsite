@@ -2,7 +2,20 @@
 
 <!-- coderabbit-ai-generated-section:v1:0053f714012a8f44b80b9b9f5561ecc7558aeae1e05c9e272958bac939976321 -->
 
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:c944643e3d454855f995272668a3fd2260a11e062da2c87c1a2bf875578628e9 -->
+
 # 3LANDS OF DEATH, BEAUTY & PROSPERITY
+
+## Current release: v0.3.0 — Roads of the Remembered
+
+Expanded Android ARM64 release: 791 GLB models, 42 surface materials, 45 locations, animated characters, regional choices and trials, and new adaptive audio. See [EXPANSION-v0.3.md](EXPANSION-v0.3.md) for the current feature status, source-pack restoration, build instructions and limitations. Large material sources are supplied as three release assets and must be restored before building a fresh checkout.
+
+The v0.2 notes below are retained as history; the v0.3 guide supersedes their art, audio, location count and graphics-preset descriptions.
+
+
+<!-- /coderabbit-ai-generated:v1 -->
 
 ## v0.2.0 — The Living Covenant
 

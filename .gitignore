@@ -1,3 +1,8 @@
 .godot/
 builds/*
 *.keystore
+
+# Reproducible high resolution and mobile derivatives delivered as source packs.
+game/assets/enrichment/surfaces/
+__pycache__/
+*.pyc

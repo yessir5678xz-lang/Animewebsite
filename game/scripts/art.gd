@@ -46,3 +46,6 @@ static func label(parent:Node3D,text:String,pos:Vector3,color:Color=Color.WHITE)
 	var l=Label3D.new();l.text=text;l.font_size=40;l.pixel_size=.012;l.billboard=BaseMaterial3D.BILLBOARD_ENABLED;l.modulate=color;l.no_depth_test=true
 	parent.add_child(l);l.position=pos
 	return l
+
+static func animated(parent:Node3D,id:String,big:float=1.0) -> Node3D:
+	var n=Node3D.new();n.set_script(load("res://scripts/animated_actor.gd"));parent.add_child(n);n.build(id);n.scale=Vector3.ONE*big;return n

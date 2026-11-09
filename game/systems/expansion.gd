@@ -3,9 +3,11 @@ const Rules=preload("res://systems/rules.gd")
 const Art=preload("res://scripts/art.gd")
 var rules=Rules.new()
 var streaming:Node
+var enrichment:Node
 var game:Node3D
 var npcs:Array=[]
 var bolts:Array=[]
+var projectile_pool:Array=[]
 var dungeon=false
 var locked:Dictionary={}
 var obstacles:Array=[]
@@ -23,11 +25,12 @@ func _ready() -> void:
 	game=get_parent()
 	foot=AudioStreamPlayer.new();add_child(foot);foot.stream=load("res://assets/audio/step.wav");foot.volume_db=-15
 	battle=AudioStreamPlayer.new();add_child(battle);battle.stream=load("res://assets/audio/combat.wav");battle.stream.loop_mode=AudioStreamWAV.LOOP_FORWARD;battle.stream.loop_end=int(battle.stream.get_length()*battle.stream.mix_rate);battle.volume_db=-60;battle.play()
+	enrichment=Node.new();enrichment.set_script(load("res://systems/enrichment.gd"));add_child(enrichment)
 	streaming=Node.new();streaming.set_script(load("res://systems/streaming.gd"));add_child(streaming)
 func state() -> Dictionary: return State.rpg
 func land_ready() -> void:
 	streaming.reset()
-	npcs.clear();obstacles.clear();bolts.clear();locked={};boss_intro.clear();dungeon=false
+	npcs.clear();obstacles.clear();bolts.clear();projectile_pool.clear();locked={};boss_intro.clear();dungeon=false
 	var data=rules.data.npcs[State.land]
 	var npc=Art.person(game.world,Color("b7c8bb"));npc.position=Vector3(data.pos[0],0,data.pos[1]);npcs.append(npc)
 	Art.label(game.world,data.name+" • E / SPEAK",npc.position+Vector3(0,3,0),Color("e5cda1"))
@@ -50,12 +53,13 @@ func land_ready() -> void:
 	rain.direction=Vector3(.2,-1,0);rain.initial_velocity_min=20;rain.initial_velocity_max=27;rain.gravity=Vector3(0,-12,0);rain.mesh=BoxMesh.new();rain.mesh.size=Vector3(.025,.45,.025)
 	var mat=StandardMaterial3D.new();mat.albedo_color=Color(.6,.75,.9,.6);mat.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED;rain.material_override=mat;game.world.add_child(rain)
 	restore_world()
+	enrichment.decorate_camp()
 func capture() -> void:
 	if not is_instance_valid(game.hero):return
 	if not dungeon:streaming.capture()
 	var survivors=[]
 	for e in game.enemies:
-		if is_instance_valid(e.node) and not e.has("chunk"):survivors.append({"pos":[e.node.position.x,e.node.position.z],"hp":e.hp,"boss":e.boss})
+		if is_instance_valid(e.node) and not e.has("chunk"):survivors.append({"pos":[e.node.position.x,e.node.position.z],"hp":e.hp,"boss":e.boss,"style":e.get("style","soldier")})
 	var ore=[]
 	for item in game.pickups:
 		if is_instance_valid(item):ore.append([item.position.x,item.position.z])
@@ -67,7 +71,7 @@ func restore_world() -> void:
 		for e in game.enemies:e.node.queue_free()
 		game.enemies.clear()
 		for e in data.enemies:
-			game.spawn_enemy(Vector3(e.pos[0],0,e.pos[1]),e.boss);game.enemies[-1].hp=e.hp
+			game.spawn_enemy(Vector3(e.pos[0],0,e.pos[1]),e.boss,e.get("style","soldier"));game.enemies[-1].hp=e.hp
 		for item in game.pickups:item.queue_free()
 		game.pickups.clear()
 		for p in data.ore:
@@ -77,7 +81,7 @@ func restore_resume() -> void:
 	if d.get("land",-1)==State.land and not d.get("dungeon",false):
 		game.hero.position=Vector3(d.x,0,d.z);game.hp=clampf(d.hp,1,rules.max_health());game.mana=clampf(d.mana,0,100)
 func _process(delta:float) -> void:
-	if not is_instance_valid(game.hero) or game.panel.visible:return
+	if not is_instance_valid(game.hero) or game.panel.visible or enrichment.cinematic>0:return
 	rules.economy_tick()
 	foot_timer+=delta
 	if game.hero.position.distance_to(last_position)>.02 and foot_timer>.3:foot_timer=0;foot.pitch_scale=randf_range(.9,1.1);foot.play()
@@ -128,12 +132,12 @@ func _process(delta:float) -> void:
 	for b in bolts.duplicate():
 		if not is_instance_valid(b.node):bolts.erase(b);continue
 		b.life-=delta;b.node.position+=b.dir*delta*22
-		if b.life<0:b.node.queue_free();bolts.erase(b);continue
+		if b.life<0:release_projectile(b);continue
 		if b.friendly:
 			for e in game.enemies.duplicate():
 				if e.node.position.distance_to(b.node.position)<2.5:
-					game.damage(e,b.damage);status(e,state().enchantment);b.node.queue_free();bolts.erase(b);break
-		elif game.hero.position.distance_to(b.node.position)<2:game.hurt(b.damage);b.node.queue_free();bolts.erase(b)
+					game.damage(e,b.damage);status(e,state().enchantment);release_projectile(b);break
+		elif game.hero.position.distance_to(b.node.position)<2:game.hurt(b.damage);release_projectile(b)
 	if State.companion and state().companion_order=="stay":game.ally.position=Vector3(-4,0,4)
 	if not locked.is_empty() and (not game.enemies.has(locked) or not is_instance_valid(locked.node)):locked={}
 	if not locked.is_empty():
@@ -141,7 +145,7 @@ func _process(delta:float) -> void:
 		game.direction=game.hero.position.direction_to(locked.node.position);game.hero.rotation.y=atan2(game.direction.x,game.direction.z)
 	var center=game.hero.position
 	game.camera.position=center+Vector3(sin(state().camera)*24,23,cos(state().camera)*24);game.camera.look_at(center)
-	game.camera.size=[34,30,27,24][int(state().preset)]
+	game.camera.size=[34,32,30,28,27][int(state().preset)]
 	game.hp=minf(game.hp,rules.max_health())
 	var region="DUNGEON" if dungeon else ["Ashen March","Glasswater Wilds","Gilded Frontier"][State.land]
 	game.objective.text+="\n%s • %02d:00 • %s • %s"%[region,hour,["Clear","Rain","Storm"][int(State.elapsed/100)%3],rules.weapon().name]
@@ -150,6 +154,10 @@ func _process(delta:float) -> void:
 		if low_fps_time>10 and state().preset>0:state().preset-=1;low_fps_time=0;apply_quality();game.say("Adaptive graphics lowered visual preset")
 	last_position=game.hero.position
 func valid_position(pos:Vector3) -> bool:
+	for chunk in streaming.chunks.values():
+		if not is_instance_valid(chunk):continue
+		for o in chunk.get_meta("obstacles",[]):
+			if absf(pos.x-o.pos.x)<o.size.x/2+.35 and absf(pos.z-o.pos.z)<o.size.z/2+.35:return false
 	for o in obstacles:
 		if absf(pos.x-o.pos.x)<o.size.x/2+.35 and absf(pos.z-o.pos.z)<o.size.z/2+.35:return false
 	return true
@@ -165,7 +173,7 @@ func strike(heavy:bool) -> void:
 	if w.effect in ["arrow","bolt","arcane"]:
 		if not target.is_empty():game.direction=game.hero.position.direction_to(target.node.position)
 		projectile(game.hero.position+Vector3(0,1,0),game.direction,true,amount*(1+rules.rank("focus")*.2 if w.effect=="arcane" else 1+rules.rank("precision")*.15),Color("dfce90"));return
-	var arm=game.hero.get_node_or_null("WeaponPivot")
+	var arm=game.hero.find_child("WeaponPivot",true,false)
 	if arm:
 		var t=game.create_tween();arm.rotation.z=-1.0;t.tween_property(arm,"rotation:z",1.0,float(w.speed)*.6);t.tween_property(arm,"rotation:z",0.0,float(w.speed)*.4)
 	if w.effect=="cleave" or heavy:
@@ -187,7 +195,11 @@ func status(e:Dictionary,element:String) -> void:
 	e.status=element;e.status_time=5.0;e.tick=0.0
 	if element=="frost":e.stagger=.5
 func projectile(pos:Vector3,dir:Vector3,friendly:bool,amount:float,color:Color) -> void:
-	var n=Art.cone(game.world,pos,.22,.7,color);n.rotation.x=PI/2
+	var n:MeshInstance3D
+	while not projectile_pool.is_empty() and not is_instance_valid(projectile_pool[-1]):projectile_pool.pop_back()
+	if projectile_pool.is_empty():n=Art.cone(game.world,pos,.22,.7,color)
+	else:n=projectile_pool.pop_back();n.position=pos;n.material_override.albedo_color=color;n.show()
+	n.rotation.x=PI/2
 	bolts.append({"node":n,"dir":Vector3(dir.x,0,dir.z).normalized(),"friendly":friendly,"damage":amount,"life":1.4})
 func on_kill(boss:bool) -> void:
 	state().mastery[state().weapon]=int(state().mastery.get(state().weapon,0))+1
@@ -204,6 +216,7 @@ func on_kill(boss:bool) -> void:
 	if boss:state().reputation[["Bellkeepers","Verdant Court","Free Guilds"][State.land]]+=20
 	if randf()<.15 and not boss:State.potions+=1
 func interact() -> bool:
+	if enrichment.interact():return true
 	if dungeon:
 		if game.hero.position.distance_to(dungeon_anchor)<5:leave_dungeon();return true
 		return false
@@ -277,14 +290,7 @@ func appearance() -> void:
 func apply_appearance() -> void:
 	if not is_instance_valid(game.hero):return
 	tint_actor(game.hero)
-	var pivot=game.hero.get_node_or_null("WeaponPivot")
-	if pivot:pivot.queue_free();game.hero.remove_child(pivot)
-	pivot=Node3D.new();pivot.name="WeaponPivot";game.hero.add_child(pivot);pivot.position=Vector3(.5,1.2,0)
-	var w=rules.weapon();var length=1.0+w.reach*.1
-	Art.box(pivot,Vector3(0,length/2,0),Vector3(.12,length,.15),Color("d5deeb"))
-	Art.box(pivot,Vector3(0,.1,0),Vector3(.6,.15,.18),Color("c1a260"))
-	if w.effect=="stagger" or w.effect=="cleave":Art.box(pivot,Vector3(.1,length-.3,0),Vector3(.65,.7,.2),Color("ccd0dc"))
-	if w.effect=="dual":Art.box(pivot,Vector3(-1.1,.2,0),Vector3(.12,1.2,.12),Color("ccd0dc"))
+	preload("res://systems/weapons.gd").equip(game.hero,state().weapon)
 func local_map() -> void:
 	var current=Vector2(game.hero.position.x,game.hero.position.z)
 	game.open_panel("LOCAL ATLAS","Wayfarer: %.0f, %.0f\nCamp: 0, 4\nKeeper: -6, -4\nChronicler: 12, -9 (travels home at night)\nAncient descent: 20, -50\nWarden: 0, -65\n\nExplore away from the road for treasure. Q toggles lock-on. R rotates the camera."%[current.x,current.y])
@@ -292,13 +298,20 @@ func local_map() -> void:
 		if game.hero.position.distance_to(p)<15 and not state().discoveries.has(str(p)):state().discoveries.append(str(p))
 	for i in range(streaming.CELLS.size()):
 		if state().discoveries.has("%d:%d"%[State.land,i]):game.button("Travel: "+streaming.REGIONS[State.land][i],func():streaming.travel(i))
+	for r in enrichment.regions:
+		if int(r.land)==State.land and not state().discoveries.has(r.id):
+			var x=(r.cell[0]+.5)*96;var z=(r.cell[1]+.5)*96
+			game.button("Survey: %s • %.0f, %.0f"%[r.name,x,z],func():game.say("Follow the coordinates on the local atlas");game.close())
 	game.button("Return",hub)
 func apply_quality() -> void:
 	var p=int(state().preset)
 	State.quality=0 if p==0 else 1
 	game.sun.shadow_enabled=p>0
-	game.get_viewport().scaling_3d_scale=[.65,.8,1.0,1.0][p]
-	game.get_viewport().msaa_3d=[Viewport.MSAA_DISABLED,Viewport.MSAA_DISABLED,Viewport.MSAA_2X,Viewport.MSAA_4X][p]
+	game.get_viewport().scaling_3d_scale=[.65,.8,1.0,1.0,1.0][p]
+	game.get_viewport().msaa_3d=[Viewport.MSAA_DISABLED,Viewport.MSAA_DISABLED,Viewport.MSAA_2X,Viewport.MSAA_4X,Viewport.MSAA_4X][p]
+	Engine.max_fps=30 if p==0 else 60
+	enrichment.refresh_surfaces()
+	enrichment.quality_tree(game.world)
 	for node in game.world.get_children():
 		if node is OmniLight3D:node.visible=p>=2
 func enter_dungeon() -> void:
@@ -319,6 +332,7 @@ func enter_dungeon() -> void:
 		for j in range(3):game.spawn_enemy(center+Vector3(-4+j*4,0,-4),false)
 	game.spawn_enemy(Vector3(3500,0,-20),false);game.enemies[-1].hp=350;game.enemies[-1].max=350
 	game.environment.environment.fog_density=.035
+	enrichment.decorate_dungeon(dungeon_anchor)
 	game.say("THE UNDERCOVENANT • Defeat the vault guardians")
 func leave_dungeon() -> void:
 	game.load_land(State.land);game.hero.position=Vector3(20,0,-46)
@@ -340,3 +354,9 @@ func _notification(what:int) -> void:
 func _exit_tree() -> void:
 	if is_instance_valid(battle):battle.stop()
 	if is_instance_valid(foot):foot.stop()
+
+func release_projectile(b:Dictionary) -> void:
+	bolts.erase(b)
+	if is_instance_valid(b.node):
+		if projectile_pool.size()<64:b.node.hide();projectile_pool.append(b.node)
+		else:b.node.queue_free()

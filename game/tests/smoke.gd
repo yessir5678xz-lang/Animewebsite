@@ -41,7 +41,7 @@ func run() -> void:
 	game.journal();assert(game.panel.visible)
 	print("PASS: startup, touch input, combat, magic, dodge, branching quest, save recovery, three lands, bosses, ending")
 	for path in ["user://test-covenant.json","user://test-covenant.json.bak","user://test-covenant.json.tmp"]:DirAccess.remove_absolute(path)
-	game.music.stop()
+	game.expansion.enrichment.stop_audio();game.music.stop()
 	game.effects.stop()
 	game.expansion.battle.stop()
 	game.expansion.foot.stop()

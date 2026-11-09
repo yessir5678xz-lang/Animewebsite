@@ -4,7 +4,7 @@ var data:Dictionary
 func _init() -> void:
 	data=JSON.parse_string(FileAccess.get_file_as_string("res://data/rpg.json"))
 func defaults() -> Dictionary:
-	return {"weapon":"sword","weapons":["sword"],"armor":0,"enchantment":"none","skills":{},"spent":0,"mastery":{},"reputation":{"Bellkeepers":0,"Verdant Court":0,"Free Guilds":0},"contracts":{},"progress":{"kill":0,"dungeon":0,"testimony":0,"kill_0":0,"kill_1":0,"kill_2":0,"dungeon_0":0,"dungeon_1":0,"dungeon_2":0,"testimony_0":0,"testimony_1":0,"testimony_2":0},"relation":0,"companion_order":"follow","settlement":{"mine":0,"market":0,"fort":0,"treasury":0,"last_day":0},"commodities":0,"skin":0,"weather":0,"camera":0.0,"discoveries":[],"chests":[],"dungeons":[],"worlds":{},"chunks":{},"resume":{},"preset":1,"adaptive":true,"controls":"standard","spell":"fire"}
+	return {"weapon":"sword","weapons":["sword"],"armor":0,"enchantment":"none","skills":{},"spent":0,"mastery":{},"reputation":{"Bellkeepers":0,"Verdant Court":0,"Free Guilds":0},"contracts":{},"progress":{"kill":0,"dungeon":0,"testimony":0,"kill_0":0,"kill_1":0,"kill_2":0,"dungeon_0":0,"dungeon_1":0,"dungeon_2":0,"testimony_0":0,"testimony_1":0,"testimony_2":0},"relation":0,"companion_order":"follow","settlement":{"mine":0,"market":0,"fort":0,"treasury":0,"last_day":0},"commodities":0,"skin":0,"weather":0,"camera":0.0,"discoveries":[],"chests":[],"dungeons":[],"worlds":{},"chunks":{},"resume":{},"preset":1,"adaptive":true,"controls":"standard","spell":"fire","enrichment":{"choices":{},"trials":[],"seen":[]}}
 func rank(id:String) -> int:
 	return int(State.rpg.skills.get(id,0))
 func max_health() -> float: return 100+State.level*10+rank("vigor")*25
@@ -55,6 +55,7 @@ func economy_tick() -> void:
 func validate(d:Dictionary) -> bool:
 	var base=defaults()
 	for key in base:
+		if key=="enrichment" and not d.has(key):continue
 		if not d.has(key) or typeof(d[key])!=typeof(base[key]):
 			# JSON numbers parse as floats; allow only the numeric conversion.
 			if not d.has(key) or not ((base[key] is int or base[key] is float) and (d[key] is int or d[key] is float)):return false
@@ -74,17 +75,19 @@ func validate(d:Dictionary) -> bool:
 	for k in ["armor","spent","relation","commodities","skin","weather","preset"]:
 		if not numeric(d[k],0,1000000):return false
 	if not d.controls in ["standard","raised"] or not d.spell in ["fire","frost","poison"]:return false
-	if d.preset>3 or d.skin>3 or not d.enchantment in ["none","fire","frost","poison"] or not d.companion_order in ["follow","guard","stay"]:return false
+	if d.preset>4 or d.preset!=floor(d.preset) or d.skin>3 or not d.enchantment in ["none","fire","frost","poison"] or not d.companion_order in ["follow","guard","stay"]:return false
 	for id in d.worlds:
 		var w=d.worlds[id]
 		if not w is Dictionary or not w.get("enemies") is Array or not w.get("ore") is Array:return false
 		for e in w.enemies:
+			if not e is Dictionary or not valid_enemy_extra(e):return false
 			if not e is Dictionary or not valid_point(e.get("pos")) or not numeric(e.get("hp"),1,1000000) or not e.get("boss") is bool:return false
 		for point in w.ore:
 			if not valid_point(point):return false
 	for key in d.chunks:
 		if not d.chunks[key] is Array:return false
 		for e in d.chunks[key]:
+			if not e is Dictionary or not valid_enemy_extra(e):return false
 			if not e is Dictionary or not valid_point(e.get("pos")) or not numeric(e.get("hp"),1,1000000):return false
 	if not d.resume.is_empty():
 		if not numeric(d.resume.get("land"),0,2) or not numeric(d.resume.get("x"),-10000000,10000000) or not numeric(d.resume.get("z"),-10000000,10000000) or not numeric(d.resume.get("hp"),0,1000000) or not numeric(d.resume.get("mana"),0,100) or not d.resume.get("dungeon") is bool:return false
@@ -94,9 +97,29 @@ func validate(d:Dictionary) -> bool:
 			if q.id==id:valid=true
 		if not valid or not d.contracts[id] is Dictionary:return false
 		if not d.contracts[id].get("status") in ["active","complete"] or not numeric(d.contracts[id].get("start"),0,10000000):return false
+	if d.has("enrichment"):
+		var e=d.enrichment
+		if not e is Dictionary or not e.get("choices") is Dictionary or not e.get("trials") is Array or not e.get("seen") is Array:return false
+		var valid_ids=[]
+		for r in JSON.parse_string(FileAccess.get_file_as_string("res://data/regions.json")).regions:valid_ids.append(r.id)
+		for id in e.choices:
+			if not id in valid_ids or not numeric(e.choices[id],1,2) or e.choices[id]!=floor(e.choices[id]):return false
+		for id in e.trials+e.seen:
+			if not id in valid_ids:return false
 	return true
 func numeric(value:Variant,low:float,high:float) -> bool:
 	return (value is float or value is int) and is_finite(value) and value>=low and value<=high
 
 func valid_point(p:Variant) -> bool:
 	return p is Array and p.size()==2 and numeric(p[0],-10000000,10000000) and numeric(p[1],-10000000,10000000)
+
+func valid_enemy_extra(e:Dictionary) -> bool:
+	if e.has("style") and not e.style in ["soldier","ranger","hexer","charger"]:return false
+	if e.has("trial"):
+		if not e.trial is String:return false
+		if not e.trial.is_empty():
+			var known=false
+			for r in JSON.parse_string(FileAccess.get_file_as_string("res://data/regions.json")).regions:
+				if r.id==e.trial and r.activity=="trial":known=true
+			if not known:return false
+	return true

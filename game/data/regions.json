@@ -1,0 +1,860 @@
+{
+  "generated_by": "CodeRabbit",
+  "regions": [
+    {
+      "id": "0:0",
+      "land": 0,
+      "index": 0,
+      "name": "Mournwatch",
+      "kind": "village",
+      "cell": [
+        -2,
+        -2
+      ],
+      "surface": "Ground037",
+      "lore": "Funeral lamps still burn in homes whose owners have been erased. Bellmaker Oren keeps one lit for his brother.",
+      "choices": [
+        "Return the brother\u2019s name",
+        "Use the lamp to track the Regent"
+      ],
+      "activity": "memorial",
+      "reward": 40
+    },
+    {
+      "id": "0:1",
+      "land": 0,
+      "index": 1,
+      "name": "The Cinder Cathedral",
+      "kind": "temple",
+      "cell": [
+        2,
+        -2
+      ],
+      "surface": "Ground048",
+      "lore": "A choir of ash sings an unfinished burial rite. Cantor Sera fears the last verse will erase her own name.",
+      "choices": [
+        "Sing the final verse with Sera",
+        "Bind the choir to defend the road"
+      ],
+      "activity": "memorial",
+      "reward": 43
+    },
+    {
+      "id": "0:2",
+      "land": 0,
+      "index": 2,
+      "name": "Hollowmere",
+      "kind": "water",
+      "cell": [
+        -3,
+        1
+      ],
+      "surface": "Ground054",
+      "lore": "An undertaker ferries empty coffins across a red lake. Each coffin carries an unpaid promise.",
+      "choices": [
+        "Pay the ferry toll for the forgotten",
+        "Claim the promises as debts"
+      ],
+      "activity": "memorial",
+      "reward": 46
+    },
+    {
+      "id": "0:3",
+      "land": 0,
+      "index": 3,
+      "name": "Blackbell Citadel",
+      "kind": "fortress",
+      "cell": [
+        3,
+        1
+      ],
+      "surface": "Ground068",
+      "lore": "Captain Rook guards a gate against soldiers who have forgotten which side they died for.",
+      "choices": [
+        "Open the gate to the nameless",
+        "Raise the old military standard"
+      ],
+      "activity": "memorial",
+      "reward": 49
+    },
+    {
+      "id": "0:4",
+      "land": 0,
+      "index": 4,
+      "name": "Embergrave",
+      "kind": "volcano",
+      "cell": [
+        -1,
+        -4
+      ],
+      "surface": "Rock020",
+      "lore": "Fire breaks through the burial fields. A smith has discovered the heat is fed by sealed soul vessels.",
+      "choices": [
+        "Break the vessels and cool the field",
+        "Temper your ore in the soul furnace"
+      ],
+      "activity": "memorial",
+      "reward": 52
+    },
+    {
+      "id": "0:5",
+      "land": 0,
+      "index": 5,
+      "name": "The Unnamed City",
+      "kind": "city",
+      "cell": [
+        1,
+        -4
+      ],
+      "surface": "Rock030",
+      "lore": "The city\u2019s street signs are blank. Cartographer Eda draws the routes from memories she is slowly losing.",
+      "choices": [
+        "Share the names you remember",
+        "Keep the only complete map"
+      ],
+      "activity": "memorial",
+      "reward": 55
+    },
+    {
+      "id": "0:6",
+      "land": 0,
+      "index": 6,
+      "name": "Redwater Crypts",
+      "kind": "crypt",
+      "cell": [
+        -4,
+        -3
+      ],
+      "surface": "Rock035",
+      "lore": "A flooded archive contains the first mortality tax. Its ink still stains the hands of anyone who reads it.",
+      "choices": [
+        "Publish the record",
+        "Hold it as leverage over the council"
+      ],
+      "activity": "trial",
+      "reward": 58
+    },
+    {
+      "id": "0:7",
+      "land": 0,
+      "index": 7,
+      "name": "Widow's Reach",
+      "kind": "forest",
+      "cell": [
+        4,
+        -3
+      ],
+      "surface": "Gravel023",
+      "lore": "Nessa plants a tree for each returning soldier. The oldest tree whispers with her husband\u2019s voice.",
+      "choices": [
+        "Let Nessa hear the voice",
+        "Sever the binding for its aether"
+      ],
+      "activity": "memorial",
+      "reward": 61
+    },
+    {
+      "id": "0:8",
+      "land": 0,
+      "index": 8,
+      "name": "The Broken Muster",
+      "kind": "battlefield",
+      "cell": [
+        -5,
+        0
+      ],
+      "surface": "Ground080",
+      "lore": "A drummer repeats the signal to retreat, a century too late. Undead companies march toward the sound.",
+      "choices": [
+        "Sound the dismissal",
+        "Redirect the companies to the fortress"
+      ],
+      "activity": "trial",
+      "reward": 64
+    },
+    {
+      "id": "0:9",
+      "land": 0,
+      "index": 9,
+      "name": "Caves of the Ninth Bell",
+      "kind": "cave",
+      "cell": [
+        5,
+        0
+      ],
+      "surface": "Rock051",
+      "lore": "Miners uncovered a bell beneath the bedrock. Its ringing wakes sleepers in distant Lethiel.",
+      "choices": [
+        "Muffle the bell with burial cloth",
+        "Study its link to the gardens"
+      ],
+      "activity": "trial",
+      "reward": 67
+    },
+    {
+      "id": "0:10",
+      "land": 0,
+      "index": 10,
+      "name": "The Ossuary Exchange",
+      "kind": "market",
+      "cell": [
+        -3,
+        -5
+      ],
+      "surface": "Gravel041",
+      "lore": "An illicit broker sells remembered birthdays. A child has come to buy back her mother\u2019s age.",
+      "choices": [
+        "Return the stolen birthdays",
+        "Confiscate the broker\u2019s reserves"
+      ],
+      "activity": "trade",
+      "reward": 70
+    },
+    {
+      "id": "0:11",
+      "land": 0,
+      "index": 11,
+      "name": "Sanctuary of Last Breath",
+      "kind": "sanctuary",
+      "cell": [
+        3,
+        -5
+      ],
+      "surface": "Ground104",
+      "lore": "A necromancer keeps the mortally wounded alive by lending them his remaining years.",
+      "choices": [
+        "Organize voluntary donors",
+        "Bind the sanctuary to your command"
+      ],
+      "activity": "memorial",
+      "reward": 73
+    },
+    {
+      "id": "0:12",
+      "land": 0,
+      "index": 12,
+      "name": "The Ashen Crown",
+      "kind": "arena",
+      "cell": [
+        -6,
+        -4
+      ],
+      "surface": "Rock061",
+      "lore": "The Regent\u2019s first champion offers a trial to anyone who will name the people buried beneath his throne.",
+      "choices": [
+        "Dedicate the trial to the erased",
+        "Claim the champion\u2019s mantle"
+      ],
+      "activity": "trial",
+      "reward": 76
+    },
+    {
+      "id": "0:13",
+      "land": 0,
+      "index": 13,
+      "name": "Ravenfall Pass",
+      "kind": "mountain",
+      "cell": [
+        6,
+        -4
+      ],
+      "surface": "Ground105",
+      "lore": "Refugees cannot cross until the watch beacons burn. The fuel is stored in an abandoned execution tower.",
+      "choices": [
+        "Light the refugees\u2019 road",
+        "Keep the beacon for your army"
+      ],
+      "activity": "memorial",
+      "reward": 79
+    },
+    {
+      "id": "0:14",
+      "land": 0,
+      "index": 14,
+      "name": "Vesper Below",
+      "kind": "underground",
+      "cell": [
+        0,
+        -6
+      ],
+      "surface": "Ground037",
+      "lore": "A community beneath the capital preserves names in songs. Their keeper asks whether the surface is safe.",
+      "choices": [
+        "Teach their songs to travelers",
+        "Keep the refuge secret"
+      ],
+      "activity": "memorial",
+      "reward": 82
+    },
+    {
+      "id": "1:0",
+      "land": 1,
+      "index": 0,
+      "name": "Moonfall Gardens",
+      "kind": "garden",
+      "cell": [
+        -2,
+        -2
+      ],
+      "surface": "Grass001",
+      "lore": "The flowers open only when someone remembers a childhood. Gardener Lune is running out of her own.",
+      "choices": [
+        "Plant ordinary seeds beside the magic",
+        "Preserve the memory-fed flowers"
+      ],
+      "activity": "memorial",
+      "reward": 40
+    },
+    {
+      "id": "1:1",
+      "land": 1,
+      "index": 1,
+      "name": "The Skyroot Temple",
+      "kind": "temple",
+      "cell": [
+        2,
+        -2
+      ],
+      "surface": "Grass004",
+      "lore": "The temple hangs from roots that drink stolen years. A novice has found a way to lower it safely.",
+      "choices": [
+        "Help the novice lower the temple",
+        "Keep the temple beyond mortal reach"
+      ],
+      "activity": "memorial",
+      "reward": 43
+    },
+    {
+      "id": "1:2",
+      "land": 1,
+      "index": 2,
+      "name": "Glasswater",
+      "kind": "water",
+      "cell": [
+        -3,
+        1
+      ],
+      "surface": "Grass005",
+      "lore": "Fish swim through reflections of another sky. Fisher Tavi found her father\u2019s face in the catch.",
+      "choices": [
+        "Release the borrowed reflection",
+        "Keep it to study the Covenant"
+      ],
+      "activity": "memorial",
+      "reward": 46
+    },
+    {
+      "id": "1:3",
+      "land": 1,
+      "index": 3,
+      "name": "Starbough Haven",
+      "kind": "village",
+      "cell": [
+        3,
+        1
+      ],
+      "surface": "Ground085",
+      "lore": "Children without dreams sleep under a luminous tree. Its keeper offers them dreams taken from Vesper.",
+      "choices": [
+        "Help them make their own stories",
+        "Accept the borrowed dreams"
+      ],
+      "activity": "memorial",
+      "reward": 49
+    },
+    {
+      "id": "1:4",
+      "land": 1,
+      "index": 4,
+      "name": "The Silver Cascade",
+      "kind": "waterfall",
+      "cell": [
+        -1,
+        -4
+      ],
+      "surface": "Ground086",
+      "lore": "The waterfall flows upward at moonrise. Engineer Nym suspects a buried engine is turning the valley\u2019s seasons.",
+      "choices": [
+        "Restore the river\u2019s direction",
+        "Harness the reversed current"
+      ],
+      "activity": "memorial",
+      "reward": 52
+    },
+    {
+      "id": "1:5",
+      "land": 1,
+      "index": 5,
+      "name": "Dreamless Refuge",
+      "kind": "sanctuary",
+      "cell": [
+        1,
+        -4
+      ],
+      "surface": "Ground097",
+      "lore": "Thalen\u2019s apprentices shelter children beneath the roots. Their stores cannot survive another winter.",
+      "choices": [
+        "Share supplies with the refuge",
+        "Trade supplies for their allegiance"
+      ],
+      "activity": "memorial",
+      "reward": 55
+    },
+    {
+      "id": "1:6",
+      "land": 1,
+      "index": 6,
+      "name": "Everspring Ruins",
+      "kind": "ruins",
+      "cell": [
+        -4,
+        -3
+      ],
+      "surface": "Ground103",
+      "lore": "An abandoned elven city celebrates a festival with no living guests. Its lamps repeat the same spring forever.",
+      "choices": [
+        "End the endless festival",
+        "Keep a lamp burning for the lost"
+      ],
+      "activity": "memorial",
+      "reward": 58
+    },
+    {
+      "id": "1:7",
+      "land": 1,
+      "index": 7,
+      "name": "Celestial Reach",
+      "kind": "sky",
+      "cell": [
+        4,
+        -3
+      ],
+      "surface": "Moss002",
+      "lore": "Astronomer Vey tracks islands against stars that never move. The sky itself may be an old illusion.",
+      "choices": [
+        "Share the true star chart",
+        "Seal the dangerous discovery"
+      ],
+      "activity": "memorial",
+      "reward": 61
+    },
+    {
+      "id": "1:8",
+      "land": 1,
+      "index": 8,
+      "name": "The Luminous Heart",
+      "kind": "forest",
+      "cell": [
+        -5,
+        0
+      ],
+      "surface": "Rock058",
+      "lore": "A giant tree grows around a Vesper gravestone. Its oldest leaves remember the first treaty.",
+      "choices": [
+        "Read the treaty aloud",
+        "Take a leaf for private study"
+      ],
+      "activity": "memorial",
+      "reward": 64
+    },
+    {
+      "id": "1:9",
+      "land": 1,
+      "index": 9,
+      "name": "Prismspine Mountains",
+      "kind": "mountain",
+      "cell": [
+        5,
+        0
+      ],
+      "surface": "Rock060",
+      "lore": "Crystal outcrops hum when an oath is broken. Pilgrims have left hundreds of apologies in the scree.",
+      "choices": [
+        "Carry the apologies home",
+        "Use the crystals to judge strangers"
+      ],
+      "activity": "memorial",
+      "reward": 67
+    },
+    {
+      "id": "1:10",
+      "land": 1,
+      "index": 10,
+      "name": "Orchid Sea",
+      "kind": "flowers",
+      "cell": [
+        -3,
+        -5
+      ],
+      "surface": "Grass006",
+      "lore": "A field of orchids follows travelers like a tide. Botanist Fenn believes each bloom seeks its original owner.",
+      "choices": [
+        "Guide the flowers back to Vesper",
+        "Cultivate a guardian flower field"
+      ],
+      "activity": "memorial",
+      "reward": 70
+    },
+    {
+      "id": "1:11",
+      "land": 1,
+      "index": 11,
+      "name": "The Sunken Conservatory",
+      "kind": "underground",
+      "cell": [
+        3,
+        -5
+      ],
+      "surface": "Grass007",
+      "lore": "Blind gardeners raise roots by listening to water. A merchant offers them sight in return for their garden.",
+      "choices": [
+        "Protect their independent sanctuary",
+        "Broker the merchant\u2019s bargain"
+      ],
+      "activity": "memorial",
+      "reward": 73
+    },
+    {
+      "id": "1:12",
+      "land": 1,
+      "index": 12,
+      "name": "Grotto of Quiet Stars",
+      "kind": "cave",
+      "cell": [
+        -6,
+        -4
+      ],
+      "surface": "Ground109",
+      "lore": "Glowing moths spell names across a cave ceiling. The youngest explorer recognizes her own future epitaph.",
+      "choices": [
+        "Let her choose a different path",
+        "Preserve the prophecy as law"
+      ],
+      "activity": "trial",
+      "reward": 76
+    },
+    {
+      "id": "1:13",
+      "land": 1,
+      "index": 13,
+      "name": "The Wild Court",
+      "kind": "wildlife",
+      "cell": [
+        6,
+        -4
+      ],
+      "surface": "Ground110",
+      "lore": "Antlered spirits gather where hunters once paid tribute. Their speaker asks for an end to iron traps.",
+      "choices": [
+        "Remove the court\u2019s traps",
+        "Demand safe passage in exchange"
+      ],
+      "activity": "memorial",
+      "reward": 79
+    },
+    {
+      "id": "1:14",
+      "land": 1,
+      "index": 14,
+      "name": "The Dawn Observatory",
+      "kind": "arena",
+      "cell": [
+        0,
+        -6
+      ],
+      "surface": "Grass001",
+      "lore": "A guardian tests whether visitors value beauty more than life. Its mirrors show the cost of every garden.",
+      "choices": [
+        "Face the trial without the bargain",
+        "Claim the mirrors\u2019 authority"
+      ],
+      "activity": "trial",
+      "reward": 82
+    },
+    {
+      "id": "2:0",
+      "land": 2,
+      "index": 0,
+      "name": "Coppergate",
+      "kind": "city",
+      "cell": [
+        -2,
+        -2
+      ],
+      "surface": "Bricks059",
+      "lore": "Workers queue at gates built from their grandparents\u2019 wages. Registrar Mira has found the original employment contracts.",
+      "choices": [
+        "Return the contracts to the workers",
+        "Renegotiate them under your seal"
+      ],
+      "activity": "memorial",
+      "reward": 40
+    },
+    {
+      "id": "2:1",
+      "land": 2,
+      "index": 1,
+      "name": "The Golden Harbor",
+      "kind": "port",
+      "cell": [
+        2,
+        -2
+      ],
+      "surface": "Bricks066",
+      "lore": "Dockmaster Pell tracks ships that arrive without crews. Their cargo was paid for in years rather than coin.",
+      "choices": [
+        "Release the cargo to bereaved families",
+        "Finance a new trading fleet"
+      ],
+      "activity": "trade",
+      "reward": 43
+    },
+    {
+      "id": "2:2",
+      "land": 2,
+      "index": 2,
+      "name": "Ironwake",
+      "kind": "industrial",
+      "cell": [
+        -3,
+        1
+      ],
+      "surface": "Bricks084",
+      "lore": "Ves\u2019s apprentices power a forge with honest coal. The council undercuts them with stolen aether.",
+      "choices": [
+        "Support the independent forge",
+        "Take a controlling stake"
+      ],
+      "activity": "trade",
+      "reward": 46
+    },
+    {
+      "id": "2:3",
+      "land": 2,
+      "index": 3,
+      "name": "The Merchant's Crown",
+      "kind": "market",
+      "cell": [
+        3,
+        1
+      ],
+      "surface": "Bricks094",
+      "lore": "A market judge weighs promises against silver. A widow\u2019s promise is the heaviest thing on the scales.",
+      "choices": [
+        "Honor the widow\u2019s claim",
+        "Purchase the disputed debt"
+      ],
+      "activity": "trade",
+      "reward": 49
+    },
+    {
+      "id": "2:4",
+      "land": 2,
+      "index": 4,
+      "name": "Aureate Palace",
+      "kind": "palace",
+      "cell": [
+        -1,
+        -4
+      ],
+      "surface": "PavingStones070",
+      "lore": "The palace guards polish an empty throne. The council hid the true succession in a locked public archive.",
+      "choices": [
+        "Open the succession record",
+        "Reserve it for your claim"
+      ],
+      "activity": "memorial",
+      "reward": 52
+    },
+    {
+      "id": "2:5",
+      "land": 2,
+      "index": 5,
+      "name": "Freeguild Market",
+      "kind": "market",
+      "cell": [
+        1,
+        -4
+      ],
+      "surface": "PavingStones128",
+      "lore": "Three guilds share a warehouse but disagree over its keys. A flood will reach the grain before their vote ends.",
+      "choices": [
+        "Open the warehouse for relief",
+        "Demand a guild charter first"
+      ],
+      "activity": "trade",
+      "reward": 55
+    },
+    {
+      "id": "2:6",
+      "land": 2,
+      "index": 6,
+      "name": "The Clockwork Vault",
+      "kind": "vault",
+      "cell": [
+        -4,
+        -3
+      ],
+      "surface": "WoodFloor051",
+      "lore": "A machine calculates interest on stolen childhoods. Its caretaker cannot find a number large enough for the debt.",
+      "choices": [
+        "Cancel the impossible accounts",
+        "Transfer the accounts to your treasury"
+      ],
+      "activity": "trial",
+      "reward": 58
+    },
+    {
+      "id": "2:7",
+      "land": 2,
+      "index": 7,
+      "name": "The Last Mint",
+      "kind": "industrial",
+      "cell": [
+        4,
+        -3
+      ],
+      "surface": "WoodFloor043",
+      "lore": "The mint\u2019s final die bears no king. A young engraver asks whose face belongs on the new currency.",
+      "choices": [
+        "Choose a symbol of the three peoples",
+        "Choose the Wayfarer\u2019s crest"
+      ],
+      "activity": "trade",
+      "reward": 61
+    },
+    {
+      "id": "2:8",
+      "land": 2,
+      "index": 8,
+      "name": "Library of Open Ledgers",
+      "kind": "library",
+      "cell": [
+        -5,
+        0
+      ],
+      "surface": "Marble006",
+      "lore": "Archivist Jun arranges forbidden ledgers by the names of victims. Soldiers have come for the index.",
+      "choices": [
+        "Protect the public index",
+        "Take custody of the ledgers"
+      ],
+      "activity": "memorial",
+      "reward": 64
+    },
+    {
+      "id": "2:9",
+      "land": 2,
+      "index": 9,
+      "name": "The Hall of Petitions",
+      "kind": "palace",
+      "cell": [
+        5,
+        0
+      ],
+      "surface": "Marble012",
+      "lore": "Petitioners sleep beneath murals of prosperity. Clerk Daro has read every plea and remembers every refusal.",
+      "choices": [
+        "Give the clerk authority to grant relief",
+        "Make relief dependent on loyalty"
+      ],
+      "activity": "memorial",
+      "reward": 67
+    },
+    {
+      "id": "2:10",
+      "land": 2,
+      "index": 10,
+      "name": "The Amber Granaries",
+      "kind": "farm",
+      "cell": [
+        -3,
+        -5
+      ],
+      "surface": "PavingStones138",
+      "lore": "Farmers grow food beside fields reserved for a royal parade. Their children have never seen the palace.",
+      "choices": [
+        "Return the parade fields to farming",
+        "Tax the fields to fund defenses"
+      ],
+      "activity": "trade",
+      "reward": 70
+    },
+    {
+      "id": "2:11",
+      "land": 2,
+      "index": 11,
+      "name": "Bridge of Nine Charters",
+      "kind": "bridge",
+      "cell": [
+        3,
+        -5
+      ],
+      "surface": "PavingStones142",
+      "lore": "Nine guilds charge a separate toll on one bridge. A caravan carries medicine that will spoil by nightfall.",
+      "choices": [
+        "Suspend the tolls for medicine",
+        "Buy exclusive crossing rights"
+      ],
+      "activity": "memorial",
+      "reward": 73
+    },
+    {
+      "id": "2:12",
+      "land": 2,
+      "index": 12,
+      "name": "Estate of Borrowed Summers",
+      "kind": "estate",
+      "cell": [
+        -6,
+        -4
+      ],
+      "surface": "WoodFloor064",
+      "lore": "A noble\u2019s orchard ripens all year while a neighboring village freezes. The roots reach the Golden Engine.",
+      "choices": [
+        "Cut the orchard\u2019s hidden feed",
+        "Redistribute a share of its harvest"
+      ],
+      "activity": "memorial",
+      "reward": 76
+    },
+    {
+      "id": "2:13",
+      "land": 2,
+      "index": 13,
+      "name": "The Concord Bastion",
+      "kind": "fortress",
+      "cell": [
+        6,
+        -4
+      ],
+      "surface": "Marble016",
+      "lore": "Soldiers from all three lands train together, but their banners tell three different accounts of the same battle.",
+      "choices": [
+        "Commission a shared history",
+        "Keep the banners under one command"
+      ],
+      "activity": "memorial",
+      "reward": 79
+    },
+    {
+      "id": "2:14",
+      "land": 2,
+      "index": 14,
+      "name": "Arena of the Uncrowned",
+      "kind": "arena",
+      "cell": [
+        0,
+        -6
+      ],
+      "surface": "Bricks059",
+      "lore": "A champion offers the council\u2019s prize to anyone who can defeat him without accepting a title.",
+      "choices": [
+        "Fight for the public purse",
+        "Fight for the champion\u2019s office"
+      ],
+      "activity": "trial",
+      "reward": 82
+    }
+  ]
+}

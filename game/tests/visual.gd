@@ -10,7 +10,7 @@ func run() -> void:
 		await create_timer(1).timeout
 		await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png("/tmp/three-lands-%d.png"%i)
-	game.music.stop()
+	game.expansion.enrichment.stop_audio();game.music.stop()
 	game.effects.stop()
 	game.expansion.battle.stop()
 	game.expansion.foot.stop()

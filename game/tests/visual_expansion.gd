@@ -14,7 +14,7 @@ func run() -> void:
 	game.expansion.skills();await shot("skills")
 	game.close();game.hero.position=Vector3(-140,0,-140);await shot("streaming")
 	game.expansion.enter_dungeon();await shot("dungeon")
-	game.music.stop();game.effects.stop();game.expansion.battle.stop();game.expansion.foot.stop();await create_timer(.2).timeout
+	game.expansion.enrichment.stop_audio();game.music.stop();game.effects.stop();game.expansion.battle.stop();game.expansion.foot.stop();await create_timer(.2).timeout
 	game.queue_free();await process_frame
 	for suffix in ["",".bak",".tmp"]:DirAccess.remove_absolute("user://visual-v02.json"+suffix)
 	quit()

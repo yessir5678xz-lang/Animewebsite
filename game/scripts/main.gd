@@ -95,34 +95,25 @@ func load_land(index:int) -> void:
 	var env=Environment.new();env.background_mode=Environment.BG_COLOR;env.background_color=Color(data.sky);env.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;env.ambient_light_color=Color("a2b4cb");env.ambient_light_energy=.65;env.fog_enabled=true;env.fog_light_color=Color(data.sky);env.fog_density=.009;environment.environment=env
 	sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-55,-30,0);sun.light_color=Color("ffe5b2");sun.shadow_enabled=State.quality>0;world.add_child(sun)
 	var ground=ArtFactory.box(world,Vector3(0,-.6,0),Vector3(190,1,190),base.darkened(.25))
+	ground.name="Terrain"
 	ground.material_override=load("res://assets/terrain.tres")
 	ground.material_override=ground.material_override.duplicate()
 	ground.material_override.set_shader_parameter("tint",base.darkened(.18))
 	ArtFactory.box(world,Vector3(0,-.05,-26),Vector3(7,.15,125),base.lightened(.22))
 	ArtFactory.box(world,Vector3(0,-.04,0),Vector3(45,.16,5),base.lightened(.18))
 	var rng=RandomNumberGenerator.new();rng.seed=9128+index*100
-	for i in range(210):
-		var p=Vector3(rng.randf_range(-90,90),0,rng.randf_range(-90,90))
-		if absf(p.x)<7 or p.length()<14: continue
-		var h=rng.randf_range(3,9)
-		if index==2:
-			ArtFactory.box(world,p+Vector3(0,h/2,0),Vector3(3,h,3),base.lightened(rng.randf_range(.0,.3)))
-			ArtFactory.cone(world,p+Vector3(0,h+1,0),2.5,2,accent.darkened(.4))
-		else:
-			ArtFactory.box(world,p+Vector3(0,h/3,0),Vector3(.6,h/1.5,.6),Color("433c4a"))
-			ArtFactory.cone(world,p+Vector3(0,h*.7,0),rng.randf_range(1.5,3),h,accent.darkened(.55))
 	for i in range(12):
 		var angle=i*TAU/12
 		var p=Vector3(sin(angle)*11,0,-65+cos(angle)*11)
 		ArtFactory.box(world,p+Vector3(0,3,0),Vector3(1.2,6,1.2),base.lightened(.25))
 	ArtFactory.label(world,data.boss,Vector3(0,7,-65),accent)
-	var npc=ArtFactory.person(world,accent);npc.position=Vector3(-6,0,-4)
+	var npc=ArtFactory.animated(world,"blocky-characters/character-"+["c","f","m"][index]);npc.position=Vector3(-6,0,-4)
 	ArtFactory.label(world,data.keeper+"\nSPEAK / E",Vector3(-6,3,-4),accent)
 	for x in [-10,10]:
 		ArtFactory.box(world,Vector3(x,2,4),Vector3(5,4,5),base.lightened(.25));ArtFactory.cone(world,Vector3(x,5,4),4,3,accent.darkened(.3))
 	ArtFactory.label(world,"WAYFARER'S CAMP\nTrade & forge near the keeper",Vector3(0,5,6))
-	hero=ArtFactory.person(world,Color("e2d4a4"));hero.position=Vector3(0,0,4)
-	ally=ArtFactory.person(world,Color("75d4dd"));ally.visible=State.companion
+	hero=ArtFactory.animated(world,"blocky-characters/character-a");hero.position=Vector3(0,0,4)
+	ally=ArtFactory.animated(world,"blocky-characters/character-q");ally.visible=State.companion
 	camera=Camera3D.new();world.add_child(camera);camera.projection=Camera3D.PROJECTION_ORTHOGONAL;camera.size=30;camera.current=true
 	for i in range(18):
 		var pos=Vector3(rng.randf_range(-35,35),0,rng.randf_range(-80,-15))
@@ -139,13 +130,20 @@ func load_land(index:int) -> void:
 	decorate(index,base,accent)
 	expansion.land_ready()
 	State.save_game()
-func spawn_enemy(pos:Vector3,boss:bool) -> void:
-	var node=ArtFactory.person(world,Color(lands[State.land].accent).darkened(.25),2.2 if boss else 1.0);node.position=pos
+func spawn_enemy(pos:Vector3,boss:bool,style:String="") -> void:
+	if style.is_empty():style=["soldier","soldier","ranger","hexer","charger"][posmod(int(pos.x*7+pos.z*3),5)]
+	var character={"soldier":"b","ranger":"g","hexer":"j","charger":"p"}.get(style,"b")
+	var model_id="blocky-characters/character-"+(["o","l","r"][State.land] if boss else character)
+	if State.land==0:model_id="graveyard-kit/character-"+("vampire" if boss else {"soldier":"skeleton","ranger":"ghost","hexer":"keeper","charger":"zombie"}[style])
+	elif State.land==1:model_id="graveyard-kit/character-ghost" if boss or style in ["hexer","ranger"] else "mini-dungeon/character-orc"
+	var node=ArtFactory.animated(world,model_id,2.2 if boss else 1.0);node.position=pos
+	if boss:
+		for i in range(5):ArtFactory.cone(node,Vector3((i-2)*.13,2.1,0),.1,.4,Color(lands[State.land].accent))
 	var health=260.0+State.land*90 if boss else 45.0+State.land*15
 	var ring=ArtFactory.cone(node,Vector3(0,.08,0),2.0,.08,Color("ef514d"));ring.visible=false
-	enemies.append({"node":node,"hp":health,"max":health,"boss":boss,"stagger":0.0,"status":"none","status_time":0.0,"tick":0.0,"phase_timer":0.0,"clock":0.0,"windup":0.0,"ring":ring,"label":ArtFactory.label(node,"",Vector3(0,3,0))})
+	enemies.append({"node":node,"style":style,"hp":health,"max":health,"boss":boss,"stagger":0.0,"status":"none","status_time":0.0,"tick":0.0,"phase_timer":0.0,"clock":0.0,"windup":0.0,"ring":ring,"label":ArtFactory.label(node,"",Vector3(0,3,0))})
 func _process(delta:float) -> void:
-	if panel.visible: return
+	if panel.visible or expansion.enrichment.cinematic>0: return
 	time+=delta;State.elapsed+=delta;auto_timer+=delta;message_timer-=delta
 	if message_timer<0: notice.text=""
 	if auto_timer>25: auto_timer=0;expansion.capture();State.save_game()
@@ -177,6 +175,7 @@ func _process(delta:float) -> void:
 		e.clock+=delta
 		e.label.text=("WARDEN " if e.boss else "")+str(maxi(0,int(e.hp)))
 		if dist>26: continue
+		if expansion.enrichment.enemy_action(e,delta,dist):continue
 		if e.windup>0:
 			e.windup-=delta
 			if e.windup<=0:
@@ -204,14 +203,19 @@ func damage(e:Dictionary,amount:float) -> void:
 	effects.stream=load("res://assets/audio/impact.wav");effects.play()
 	e.hp-=amount
 	if e.hp<=0:
+		expansion.enrichment.on_kill(e)
 		expansion.on_kill(e.boss)
 		State.gold+=55 if e.boss else 8;State.reward(100 if e.boss else 18);State.kills+=1
 		if e.boss:
 			State.quests[State.land]=2;State.ore+=5;say("WARDEN FALLEN • Covenant shard reclaimed");State.save_game()
 		else: say("+8 gold · +18 experience")
-		e.node.queue_free();enemies.erase(e)
+		e.node.fall();var corpse=weakref(e.node);get_tree().create_timer(1.2).timeout.connect(func():
+			var n=corpse.get_ref()
+			if is_instance_valid(n):n.queue_free())
+		enemies.erase(e)
 func spell() -> void:
 	if panel.visible or mana<30 or cooldown>0: return
+	hero.gesture("holding-both-shoot",.7)
 	mana-=30;cooldown=.7;effects.stream=load("res://assets/audio/spell.wav");effects.play()
 	var orb=ArtFactory.cone(world,hero.position+Vector3(0,.15,0),7,.2,{"fire":Color("f78d47"),"frost":Color("78e7e1"),"poison":Color("86ca66")}[State.rpg.spell]);var tween=create_tween();tween.tween_property(orb,"scale",Vector3.ZERO,.5);tween.tween_callback(orb.queue_free)
 	for e in enemies.duplicate():
@@ -219,6 +223,7 @@ func spell() -> void:
 		if enemies.has(e) and e.node.position.distance_to(hero.position)<8:expansion.status(e,State.rpg.spell)
 func dodge() -> void:
 	if panel.visible or stamina<22-expansion.rules.rank("shadow")*3: return
+	hero.gesture("sprint",.4)
 	stamina-=22-expansion.rules.rank("shadow")*3;invulnerable=.5;var next=hero.position+direction*4
 	if expansion.valid_position(next):hero.position=next
 func hurt(amount:float) -> void:
@@ -231,6 +236,7 @@ func hurt(amount:float) -> void:
 			return
 		amount*=.2
 	amount*=maxf(.15,1.0-expansion.rules.rank("ward")*.08-State.rpg.armor*.05-State.rpg.settlement.fort*.02-(.1 if State.companion and State.rpg.companion_order=="guard" else 0.0))
+	hero.gesture("emote-no",.3)
 	hp-=amount;invulnerable=.45
 	if hp<=0:
 		State.gold=maxi(0,State.gold-15);hero.position=Vector3(0,0,4);hp=expansion.rules.max_health();say("Returned to camp • 15 gold lost")
@@ -275,7 +281,7 @@ func journal() -> void:
 		text+="\n\n"+("DAWN OF THE FREE: You dissolve the Covenant. The kingdoms must learn to flourish without stealing each other's futures." if State.mercy>State.dominion else "THE FOURTH CROWN: You take the Covenant's throne. For the first time, all three lands kneel to one mortal will.")
 	open_panel("CHRONICLE",text);button("Return",close)
 func atlas() -> void:
-	open_panel("ATLAS OF THE THREE LANDS","The old roads bind every kingdom. Travel returns you to the local camp. The wardens and your choices persist; frontier enemies and ore replenish.")
+	open_panel("ATLAS OF THE THREE LANDS","The old roads bind every kingdom. Travel returns you to the local camp. The wardens and your choices persist; frontier enemies and collected ore remain recorded.")
 	if ResourceLoader.exists("res://assets/ui/world-map.png"):
 		var map=TextureRect.new();map.texture=load("res://assets/ui/world-map.png");map.custom_minimum_size=Vector2(650,300);map.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;map.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;body.add_child(map)
 	for i in range(3): button(lands[i].name+"  /  "+lands[i].region,func():load_land(i);close())
@@ -355,7 +361,7 @@ func _exit_tree() -> void:
 	if is_instance_valid(effects): effects.stop()
 
 func credits() -> void:
-	open_panel("CREDITS", "3LANDS OF DEATH, BEAUTY & PROSPERITY\nOriginal procedural assets, narrative, and synthesized music. Keeper portraits and world atlas generated through ForgeGUI; commercial-use terms: forgegui.com/terms.\nBuilt with Godot 4.7.2 (MIT).\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt"))
+	open_panel("CREDITS", "3LANDS OF DEATH, BEAUTY & PROSPERITY\nOriginal procedural assets, narrative, and synthesized music. Kenney CC0 model packs and ambientCG CC0 PBR surfaces. New original synthesized score and ambient loops. Keeper portraits and world atlas generated through ForgeGUI; commercial-use terms: forgegui.com/terms.\nBuilt with Godot 4.7.2 (MIT).\n\n" + FileAccess.get_file_as_string("res://data/THIRD_PARTY_ASSETS.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt"))
 	button("Return", settings)
 
 func reload_save() -> void:
@@ -369,7 +375,7 @@ func show_portrait(index:int) -> void:
 		var image=TextureRect.new();image.texture=load(path);image.custom_minimum_size=Vector2(160,160);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;body.add_child(image);body.move_child(image,1)
 func graphics_settings() -> void:
 	open_panel("GRAPHICS & CAMERA","Presets change rendering resolution, shadows, anti-aliasing, rain and local lights. Adaptive mode lowers the preset after sustained slow frames.")
-	for i in range(4):button(["LOW","MEDIUM","HIGH","ULTRA"][i],func():State.rpg.preset=i;expansion.apply_quality();graphics_settings())
+	for i in range(5):button(["LOW","MEDIUM","HIGH","ULTRA","MAXIMUM"][i],func():State.rpg.preset=i;expansion.apply_quality();graphics_settings())
 	button("Adaptive: "+str(State.rpg.adaptive),func():State.rpg.adaptive=not State.rpg.adaptive;graphics_settings())
 	button("Rotate camera",func():State.rpg.camera+=PI/4;close())
 	button("Lock on / release",func():expansion.locked=nearest(25) if expansion.locked.is_empty() else {};close())
@@ -377,6 +383,6 @@ func graphics_settings() -> void:
 
 func shutdown() -> void:
 	expansion.capture();State.save_game();set_process(false)
-	music.stop();effects.stop();expansion.battle.stop();expansion.foot.stop()
+	expansion.enrichment.stop_audio();music.stop();effects.stop();expansion.battle.stop();expansion.foot.stop()
 	await get_tree().create_timer(.2).timeout
 	get_tree().quit()

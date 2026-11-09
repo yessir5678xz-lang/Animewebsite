@@ -1,0 +1,20 @@
+[
+  {
+    "name": "3lands-0.3.0-source-surfaces-death.zip",
+    "bytes": 1103626251,
+    "sha256": "0585e619f4d452b6b80741285f637bd23f82338aaba369368d20c29bb7b55b48",
+    "purpose": "Source materials; not required to play the APK"
+  },
+  {
+    "name": "3lands-0.3.0-source-surfaces-beauty.zip",
+    "bytes": 1197258915,
+    "sha256": "fba351a5ff1f8ed0a89fcc71e0b6055590122bbe3a47b2dec1e9602503a834f9",
+    "purpose": "Source materials; not required to play the APK"
+  },
+  {
+    "name": "3lands-0.3.0-source-surfaces-prosperity.zip",
+    "bytes": 687560107,
+    "sha256": "feac1050b32019f952ebb60021ad065f45b4d65fa5592c81865bd5ee010fc838",
+    "purpose": "Source materials; not required to play the APK"
+  }
+]

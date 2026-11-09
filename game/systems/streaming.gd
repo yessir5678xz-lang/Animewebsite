@@ -6,12 +6,8 @@ var expansion:Node
 var chunks:Dictionary={}
 var last_cell=Vector2i(99999,99999)
 var current_land=-1
-const REGIONS=[
-	["Mournwatch","The Cinder Cathedral","Hollowmere","Blackbell Citadel","Embergrave","The Unnamed City","Redwater Crypts","Widow's Reach"],
-	["Moonfall Gardens","The Skyroot Temple","Glasswater","Starbough Haven","The Silver Cascade","Dreamless Refuge","Everspring Ruins","Celestial Reach"],
-	["Coppergate","The Golden Harbor","Ironwake","The Merchant's Crown","Aureate Palace","Freeguild Market","The Clockwork Vault","The Last Mint"]
-]
-const CELLS=[Vector2i(-2,-2),Vector2i(2,-2),Vector2i(-3,1),Vector2i(3,1),Vector2i(-1,-4),Vector2i(1,-4),Vector2i(-4,-3),Vector2i(4,-3)]
+const REGIONS=[["Mournwatch", "The Cinder Cathedral", "Hollowmere", "Blackbell Citadel", "Embergrave", "The Unnamed City", "Redwater Crypts", "Widow's Reach", "The Broken Muster", "Caves of the Ninth Bell", "The Ossuary Exchange", "Sanctuary of Last Breath", "The Ashen Crown", "Ravenfall Pass", "Vesper Below"], ["Moonfall Gardens", "The Skyroot Temple", "Glasswater", "Starbough Haven", "The Silver Cascade", "Dreamless Refuge", "Everspring Ruins", "Celestial Reach", "The Luminous Heart", "Prismspine Mountains", "Orchid Sea", "The Sunken Conservatory", "Grotto of Quiet Stars", "The Wild Court", "The Dawn Observatory"], ["Coppergate", "The Golden Harbor", "Ironwake", "The Merchant's Crown", "Aureate Palace", "Freeguild Market", "The Clockwork Vault", "The Last Mint", "Library of Open Ledgers", "The Hall of Petitions", "The Amber Granaries", "Bridge of Nine Charters", "Estate of Borrowed Summers", "The Concord Bastion", "Arena of the Uncrowned"]]
+const CELLS=[Vector2i(-2,-2),Vector2i(2,-2),Vector2i(-3,1),Vector2i(3,1),Vector2i(-1,-4),Vector2i(1,-4),Vector2i(-4,-3),Vector2i(4,-3),Vector2i(-5,0),Vector2i(5,0),Vector2i(-3,-5),Vector2i(3,-5),Vector2i(-6,-4),Vector2i(6,-4),Vector2i(0,-6)]
 func _ready() -> void:
 	expansion=get_parent();game=expansion.game
 func reset() -> void:
@@ -37,7 +33,7 @@ func _process(_delta:float) -> void:
 func store_chunk(c:Vector2i) -> void:
 	var list=[]
 	for e in game.enemies:
-		if e.get("chunk")==c:list.append({"pos":[e.node.position.x,e.node.position.z],"hp":e.hp})
+		if e.get("chunk")==c:list.append({"pos":[e.node.position.x,e.node.position.z],"hp":e.hp,"style":e.get("style","soldier"),"trial":e.get("trial","")})
 	State.rpg.chunks["%d:%d:%d"%[State.land,c.x,c.y]]=list
 func unload_chunk(c:Vector2i) -> void:
 	store_chunk(c)
@@ -55,23 +51,12 @@ func load_chunk(c:Vector2i) -> void:
 	var ground=Art.box(root,center+Vector3(0,-.6,0),Vector3(SIZE,1,SIZE),base)
 	ground.material_override=load("res://assets/terrain.tres").duplicate();ground.material_override.set_shader_parameter("tint",base.darkened(.2))
 	var rng=RandomNumberGenerator.new();rng.seed=abs(c.x*7919+c.y*104729+State.land*2309)
-	var foliage=MultiMeshInstance3D.new();var multi=MultiMesh.new();multi.transform_format=MultiMesh.TRANSFORM_3D;multi.use_colors=true
-	var shape=CylinderMesh.new();shape.top_radius=0;shape.bottom_radius=2;shape.height=7;shape.radial_segments=8;multi.mesh=shape;multi.instance_count=80
-	var material=StandardMaterial3D.new();material.vertex_color_use_as_albedo=true;material.albedo_color=accent.darkened(.45);material.roughness=.9;foliage.material_override=material;foliage.multimesh=multi;root.add_child(foliage)
-	for i in range(80):
-		var pos=center+Vector3(rng.randf_range(-45,45),3,rng.randf_range(-45,45));var scale=rng.randf_range(.6,1.7)
-		multi.set_instance_transform(i,Transform3D(Basis.IDENTITY.scaled(Vector3.ONE*scale),pos));multi.set_instance_color(i,Color.WHITE.darkened(rng.randf_range(0,.3)))
-	var region=CELLS.find(c)
-	if region>=0:
-		Art.label(root,REGIONS[State.land][region],center+Vector3(0,8,0),accent)
-		for i in range(8):
-			var angle=i*TAU/8;var p=center+Vector3(sin(angle)*18,3,cos(angle)*18)
-			Art.box(root,p,Vector3(5,6,5),base.lightened(.2));Art.cone(root,p+Vector3(0,4,0),4,3,accent.darkened(.4))
-		Art.box(root,center+Vector3(0,-.05,0),Vector3(14,.2,14),base.lightened(.3))
+	expansion.enrichment.decorate_chunk(root,center,c,ground)
 	var key="%d:%d:%d"%[State.land,c.x,c.y]
 	if State.rpg.chunks.has(key):
 		for record in State.rpg.chunks[key]:
-			game.spawn_enemy(Vector3(record.pos[0],0,record.pos[1]),false);game.enemies[-1].hp=record.hp;game.enemies[-1].chunk=c
+			game.spawn_enemy(Vector3(record.pos[0],0,record.pos[1]),false,record.get("style","soldier"));game.enemies[-1].hp=record.hp;game.enemies[-1].chunk=c
+			if not record.get("trial","").is_empty():game.enemies[-1].trial=record.trial
 	else:
 		for i in range(3):game.spawn_enemy(center+Vector3(rng.randf_range(-30,30),0,rng.randf_range(-30,30)),false);game.enemies[-1].chunk=c
 func travel(index:int) -> void:

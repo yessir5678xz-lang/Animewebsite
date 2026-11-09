@@ -1,0 +1,405 @@
+{
+  "generated_by": "CodeRabbit",
+  "model_packs": [
+    {
+      "name": "nature-kit",
+      "url": "https://kenney.nl/assets/nature-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "fa7974a0d342bfe63c38664ba9f8ec1a4aab8ea25f099bdc56870e33588c4d9d",
+      "license_path": "game/assets/enrichment/models/nature-kit/LICENSE.txt"
+    },
+    {
+      "name": "fantasy-town-kit",
+      "url": "https://kenney.nl/assets/fantasy-town-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "1a7530c09f4d2fa2cdee259876f089334f8b1f27fa86a0c4f54ef86cdd8676ef",
+      "license_path": "game/assets/enrichment/models/fantasy-town-kit/LICENSE.txt"
+    },
+    {
+      "name": "castle-kit",
+      "url": "https://kenney.nl/assets/castle-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "921f3f73927bb23106cae34bc21d5ab4b033a9fc120475e96f714a406e3169df",
+      "license_path": "game/assets/enrichment/models/castle-kit/LICENSE.txt"
+    },
+    {
+      "name": "graveyard-kit",
+      "url": "https://kenney.nl/assets/graveyard-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "1a93613f2e5675f3310acf49ec9ef13ae7adeb756ac3b205bfb6cc9311a81062",
+      "license_path": "game/assets/enrichment/models/graveyard-kit/LICENSE.txt"
+    },
+    {
+      "name": "mini-dungeon",
+      "url": "https://kenney.nl/assets/mini-dungeon",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "19c4648680cb1d2e8836cade96cbf9781c0c1f45fbc6d2ce41cee8239a3ec4d8",
+      "license_path": "game/assets/enrichment/models/mini-dungeon/LICENSE.txt"
+    },
+    {
+      "name": "blocky-characters",
+      "url": "https://kenney.nl/assets/blocky-characters",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "5e123859aa0c1598342b600c6db197024a1d63eb9ec531398b310725f589887e",
+      "license_path": "game/assets/enrichment/models/blocky-characters/LICENSE.txt"
+    },
+    {
+      "name": "survival-kit",
+      "url": "https://kenney.nl/assets/survival-kit",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "archive_sha256": "c3586341b5932c87eb43d75d915434f47daed168b17ed36a03e8ca9977c7443e",
+      "license_path": "game/assets/enrichment/models/survival-kit/LICENSE.txt"
+    }
+  ],
+  "material_sets": [
+    {
+      "id": "Ground037",
+      "source": "https://ambientcg.com/get?file=Ground037_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground037",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "6f989706e2b3a354b0675ef0c5f6d80be92ab12b8d5a5e2fe6fb69816eb58dbc"
+    },
+    {
+      "id": "Ground048",
+      "source": "https://ambientcg.com/get?file=Ground048_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground048",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "105e17306ecf778790161cab4e72366e2502259b9d7108ecc91ccec1fc0d674f"
+    },
+    {
+      "id": "Ground054",
+      "source": "https://ambientcg.com/get?file=Ground054_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground054",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "13b6964cc9afb04e577f18204fd4656c2786e0197cadf34552e1ef9b177a67e6"
+    },
+    {
+      "id": "Ground068",
+      "source": "https://ambientcg.com/get?file=Ground068_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground068",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "4653fbe1e5f16c47db250e326c1f940abbdac085c352cdaaf0b1011cfa7adfc7"
+    },
+    {
+      "id": "Ground080",
+      "source": "https://ambientcg.com/get?file=Ground080_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground080",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "d0fa768f11cef0af49b95434b306d22cd4f579e7d716b0f0e3ee781f637b042e"
+    },
+    {
+      "id": "Ground085",
+      "source": "https://ambientcg.com/get?file=Ground085_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground085",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3a8232046579faba058a6151ee674e9f027007e49bb836abaab5d0c3f1d1764b"
+    },
+    {
+      "id": "Ground086",
+      "source": "https://ambientcg.com/get?file=Ground086_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground086",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "a68e85ae96c9f61399d84a8cdcb25b36d96b011e3842beca7a928ad388003d62"
+    },
+    {
+      "id": "Ground097",
+      "source": "https://ambientcg.com/get?file=Ground097_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground097",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "852e49a4cb8abc6e6d9f313dec37a9c98b8893bbb3aeb32241238c55bd44e054"
+    },
+    {
+      "id": "Ground103",
+      "source": "https://ambientcg.com/get?file=Ground103_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground103",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "8267509e6b99157d5c4f538b0ed4a2218f5b95001c639326ce076346f47da389"
+    },
+    {
+      "id": "Grass001",
+      "source": "https://ambientcg.com/get?file=Grass001_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass001",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "d16ce0597e072c0718ee0da90b2a21bfa22d5c90c218b34bc7eddaa2fd304c21"
+    },
+    {
+      "id": "Grass004",
+      "source": "https://ambientcg.com/get?file=Grass004_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass004",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "8b32b61b592b5b60558f76eedfc9adcb1787963dce2e679bdb9ee324c9d0e422"
+    },
+    {
+      "id": "Grass005",
+      "source": "https://ambientcg.com/get?file=Grass005_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass005",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "7e7deb7b97f662049bbc4f505f75810aa92cd588a4c4c188fa36de48a56ac9ac"
+    },
+    {
+      "id": "Rock020",
+      "source": "https://ambientcg.com/get?file=Rock020_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock020",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "04613f06c317d9a05524e44808108336921c4c7cc2fbf11791ed0d4392f6e317"
+    },
+    {
+      "id": "Rock030",
+      "source": "https://ambientcg.com/get?file=Rock030_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock030",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "4af985ca8e166de0586def46e28f50a0550c8cce92fa69dbc2ef7f6034d056de"
+    },
+    {
+      "id": "Rock035",
+      "source": "https://ambientcg.com/get?file=Rock035_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock035",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3c3b7afcb97b4cee31a5bbb82724aa08437faf75b0e672119de2f8785abd8fd2"
+    },
+    {
+      "id": "Rock051",
+      "source": "https://ambientcg.com/get?file=Rock051_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock051",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "db475bb4ebfd9ac8396d1d7ba29ff495fc8b8d1f95e1396b1e00ff61b6b58e0f"
+    },
+    {
+      "id": "Rock058",
+      "source": "https://ambientcg.com/get?file=Rock058_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock058",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "f8328771f160ca5476e44ec3c172c91edb7f42fb33ef94b09a2a2f93278816d4"
+    },
+    {
+      "id": "Rock060",
+      "source": "https://ambientcg.com/get?file=Rock060_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock060",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "861e8a768be0d5e7003d82b6f9cfcc5dc9da7f334cc798aaaa1e79299c11e567"
+    },
+    {
+      "id": "Bricks059",
+      "source": "https://ambientcg.com/get?file=Bricks059_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks059",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "84730c5fca9b0b692cc99279496133af139ffe5851e34884d2ec5122b7e07d23"
+    },
+    {
+      "id": "Bricks066",
+      "source": "https://ambientcg.com/get?file=Bricks066_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks066",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "81d3e9b25ac58beeb531527823306fac79cfdf4302a75cbd29fd22e0aa977d6c"
+    },
+    {
+      "id": "Bricks084",
+      "source": "https://ambientcg.com/get?file=Bricks084_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks084",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "30c90c3d7ae9ec54a4e631be4d1d39edcb1645be7f64f56f309cc2d2c46590f6"
+    },
+    {
+      "id": "Bricks094",
+      "source": "https://ambientcg.com/get?file=Bricks094_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks094",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "95d6c4432be59e5ee773adf923215ba860c8550dd4c94a8a064b58944278eac7"
+    },
+    {
+      "id": "PavingStones070",
+      "source": "https://ambientcg.com/get?file=PavingStones070_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones070",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "ada3c099394b1704cb5db7164a45c6621fd15cc6ea8c71deabd97da644318cff"
+    },
+    {
+      "id": "PavingStones128",
+      "source": "https://ambientcg.com/get?file=PavingStones128_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones128",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e99c716eca1d507d6cd6abaf3d6a3fea8993ea79043a1a21f18ab51777a0b692"
+    },
+    {
+      "id": "WoodFloor051",
+      "source": "https://ambientcg.com/get?file=WoodFloor051_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor051",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "b865d3dfe14e17008e12471af4e6bfaa7d9bbff1ab7ed846c09c52be1f9279ab"
+    },
+    {
+      "id": "WoodFloor043",
+      "source": "https://ambientcg.com/get?file=WoodFloor043_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor043",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "b3173bf3c51b3723c7f3cc91e0393235dd1ad9d840ed4c17f1966940bd711ba2"
+    },
+    {
+      "id": "Marble006",
+      "source": "https://ambientcg.com/get?file=Marble006_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble006",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e99aaa9e4ea8b907ab679f3f5d809103b7c154fba1d7d1e2bab7cac6b740d383"
+    },
+    {
+      "id": "Marble012",
+      "source": "https://ambientcg.com/get?file=Marble012_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble012",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3aeb5bd63a9371d5638c33c61d715683bdab30234d3d23a8029ca9fe6e35fc59"
+    },
+    {
+      "id": "Moss002",
+      "source": "https://ambientcg.com/get?file=Moss002_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Moss002",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "75f12a93b0632f867e321385ad024fc21180a419fc3b8740165ff774dea4f21c"
+    },
+    {
+      "id": "Gravel023",
+      "source": "https://ambientcg.com/get?file=Gravel023_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Gravel023",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "c89a65685ca9992d5c556c43afa9268012bde441c8b644fda437047844155baf"
+    },
+    {
+      "id": "Gravel041",
+      "source": "https://ambientcg.com/get?file=Gravel041_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Gravel041",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "69dc669fbadbbddc992ad3e4cfbf5554ec70dfe3c8161816fc70d41be47e9bcc"
+    },
+    {
+      "id": "Ground104",
+      "source": "https://ambientcg.com/get?file=Ground104_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground104",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "db88bda7898f174c7d3e443c8078263cb79293bb17c5c78bf2d3efa7ab2132c0"
+    },
+    {
+      "id": "Rock061",
+      "source": "https://ambientcg.com/get?file=Rock061_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock061",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e7d4b49a3be2ac42d3ff4a593d38127aef0613ed3a5bd0d9e3fc292547c79a1d"
+    },
+    {
+      "id": "Ground105",
+      "source": "https://ambientcg.com/get?file=Ground105_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground105",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "5b872810ad176a0251f6e93e1476cb2260bc048078076001b05177794f6b124d"
+    },
+    {
+      "id": "Grass006",
+      "source": "https://ambientcg.com/get?file=Grass006_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass006",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "ed72d6e78d99619e1531a2072c4ba3ea45e9682546a0c599f4ba7af77737243c"
+    },
+    {
+      "id": "Grass007",
+      "source": "https://ambientcg.com/get?file=Grass007_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass007",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "c007bf43c1fe6bbad34e33560e2e63ae2207fbc8ba14e193baf72983d130701d"
+    },
+    {
+      "id": "Ground109",
+      "source": "https://ambientcg.com/get?file=Ground109_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground109",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e40777d3f678e94926ee81826d40abbb01fd2c75c177f37e4f1a6af5ad4b5506"
+    },
+    {
+      "id": "Ground110",
+      "source": "https://ambientcg.com/get?file=Ground110_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground110",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "a065ad99a9e9993408251e045834f2ab10b2a5793ea7087b516b280658b66524"
+    },
+    {
+      "id": "PavingStones138",
+      "source": "https://ambientcg.com/get?file=PavingStones138_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones138",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "59b2d58069a6daaa4b71df7478d4112d44a0076b118cbddbba0e3ec6ff2987a1"
+    },
+    {
+      "id": "PavingStones142",
+      "source": "https://ambientcg.com/get?file=PavingStones142_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones142",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "2ed628282465d869a176672d7ccf1773f2ca819f626e5bb7b91b3ec82c0a0289"
+    },
+    {
+      "id": "WoodFloor064",
+      "source": "https://ambientcg.com/get?file=WoodFloor064_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor064",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "200e9c577e2ab84e1e67ea51ceb1be712b8c851ed4a061ade499ccfe95641e19"
+    },
+    {
+      "id": "Marble016",
+      "source": "https://ambientcg.com/get?file=Marble016_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble016",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "fb26a74276519bfef287a6eda210ea312ac37ebecb86db9188761917665ccc56"
+    }
+  ],
+  "original_work": {
+    "audio": "CodeRabbit-assisted original synthesis; tools/compose_score.py; no sampled recordings.",
+    "narrative": "CodeRabbit-assisted original Covenant regional writing; tools/write_world_content.py.",
+    "clothing_and_weapon_adaptations": "Original code with Kenney CC0 components."
+  },
+  "retained_assets": "ForgeGUI portraits/atlas: see assets/ui/forgegui-assets.json and existing README terms; no new ForgeGUI calls."
+}

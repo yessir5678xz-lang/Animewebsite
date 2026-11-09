@@ -1,0 +1,2721 @@
+{
+  "generated_by": "CodeRabbit",
+  "materials": [
+    {
+      "id": "Ground037",
+      "source": "https://ambientcg.com/get?file=Ground037_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground037",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "6f989706e2b3a354b0675ef0c5f6d80be92ab12b8d5a5e2fe6fb69816eb58dbc",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "f0bf239d0b11a1ad20f74ef04e8253bc0a36d5bdc6d51ee06cf17f02007531c8",
+          "bytes": 32235642
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "bbf18754236c644b3b713de05a8c8393764e3c9e7e6f88c52d5849e7b1223437",
+          "bytes": 609568
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "8c21ecea830a6803876bdca4913664830d21fc9d295766c07d93693b47704254",
+          "bytes": 40316293
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "8cc21cf37714f29730bcb90786e03e9c9c69acf3e47720b02664bc01da738935",
+          "bytes": 631203
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "98b36d2bc6fe6fef27c1466402be9711ff69b7d9bb88b4e3a933dd125abee307",
+          "bytes": 13267006
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "5ff308fccfc7abc48c75280eb175b0793da571fd42e86174f1fc5c2581410392",
+          "bytes": 376838
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "d009c94dac3273a299cd16d05bfee9ff73d5acb6e8f8b1fdf4a5fae72cfa6899",
+          "bytes": 6643249
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground037/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "a521474f011077ffd02f5bbbd9ebfe9eaa1e9c5fc8631f1e91678ca66f869a70",
+          "bytes": 273843
+        }
+      ]
+    },
+    {
+      "id": "Ground048",
+      "source": "https://ambientcg.com/get?file=Ground048_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground048",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "105e17306ecf778790161cab4e72366e2502259b9d7108ecc91ccec1fc0d674f",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "0814f593e311dd29281e13fb4fccba1a888d4a1b64c640d5920107e942b6cf0e",
+          "bytes": 33530263
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "2b462940b1c197272b3ce03b33fb5d24f17950d0e4337f4c053a0ace31119b9d",
+          "bytes": 572261
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "38687d04af6903d3e1dc0216e8039f4ff3482be1147ab0487a47311fd4149f27",
+          "bytes": 40735924
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "8690cdab330b290b1fbd6bdaf27355d91f2d968cb72745e5ca56e17d08c1b287",
+          "bytes": 600046
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "9f5ec1912638a48b1883e2f13d090624415072c2114719eacf94f31b9d431618",
+          "bytes": 8592980
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "1cea62324f72ff0b3aa3c3b57f29638c582680ab85f9ab3a8b3c245f9e14c182",
+          "bytes": 342414
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "7723b60977fc3a4807a193e7e17267073ad0771c208f95deffbb10579b4c05dd",
+          "bytes": 13445857
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground048/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "8525306c408b40f21c0f005383e73fb357dcfecdd1f0ecdf3683f715283e3b5f",
+          "bytes": 549557
+        }
+      ]
+    },
+    {
+      "id": "Ground054",
+      "source": "https://ambientcg.com/get?file=Ground054_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground054",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "13b6964cc9afb04e577f18204fd4656c2786e0197cadf34552e1ef9b177a67e6",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "0598da49e344044ac635abe098148a2b035f29392adff6a7b273e00560f73569",
+          "bytes": 27518492
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "27c9ce4c9758389b171a90cfe41edb4489bc08ec553955e07d4a887155f11582",
+          "bytes": 349929
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "4d44e86b22ff1ec891fbb8505a5569fec91058aa0c514fdabd25acad4ce8469d",
+          "bytes": 39368378
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f193f7e0f2aa1f03449e63d382cb04b51a55fa94c0241a0ea688a2c8f851f7a4",
+          "bytes": 397241
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "1bbd8f4a4940aacfce17d1222450594a6d0c2d3da2b618b1247cbb0f9635a538",
+          "bytes": 12078589
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "2b70d3cd469138c4ae580708b84971a1ca9d2b872f29cd3044b8094fd65bdbbd",
+          "bytes": 348455
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "35ec21dfb4af326a85d1d778d81fe31c72f11807b33ac3b88c26515d87e5d6df",
+          "bytes": 10060338
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground054/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "510f7c1f9be90501fa26ecb0a785c468fd8d7fc133a2dd22e899f530f056f978",
+          "bytes": 202647
+        }
+      ]
+    },
+    {
+      "id": "Ground068",
+      "source": "https://ambientcg.com/get?file=Ground068_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground068",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "4653fbe1e5f16c47db250e326c1f940abbdac085c352cdaaf0b1011cfa7adfc7",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "66b299ff77cf377421d142c365e6880d2481f52920120ccb53e8096f0cb15734",
+          "bytes": 25473403
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "86f78b8cb1d0c54c654a5cb11d4950f42ce2c1ab6f045a7e08f85a248396dd68",
+          "bytes": 465518
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "55d2da33b7e919c1d4a45a8d25c2e9a03c93deec2e8108281071cc7fae6b3883",
+          "bytes": 35876645
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "d5a6f99a22d0f8b538bb4003843618b20a1d428098d404c9fd841f5fdf88b75f",
+          "bytes": 527735
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "9aa89fa24e6134b908672b13c3134884907444918305036c821821f7eb3a0948",
+          "bytes": 9315959
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "770315f499887dee8b36e0bbe75421c12befe191ddaab44eeea3c3ff52ef6329",
+          "bytes": 381812
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "536b512af27f86b95a9e80184531b8189fecf4b3c4c9531068a17aab0f4718ce",
+          "bytes": 10626538
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground068/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "db66c66f46950fb502c3b2108c2fb434025540a5445c880e9398b097bc92299e",
+          "bytes": 404530
+        }
+      ]
+    },
+    {
+      "id": "Ground080",
+      "source": "https://ambientcg.com/get?file=Ground080_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground080",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "d0fa768f11cef0af49b95434b306d22cd4f579e7d716b0f0e3ee781f637b042e",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "e6fa02729a0d5a64b6854781d3ef05a56196e17da39ec54f4bdee1b9b1e1bc5b",
+          "bytes": 20140484
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "517673d4683b5c5db1aa391daa180098e997dcd759a9ba74c901a5f64471e2d0",
+          "bytes": 233927
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "1f32c26a7a3bdd0a90d6740410a21239c6cfd75322892a4435a825dd6153bdde",
+          "bytes": 28999067
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "d27c06c6b2292bb77be04d02f0c7927d4db224a6c7946a7224a81e5044c400c9",
+          "bytes": 252646
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "ec786898e6f990bc2f4aa54149b379d9f7df2d7b1c253f705871f4c51e8bf6fb",
+          "bytes": 8113289
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "4eac372bb1e0e22e1ed36b7b7778f5f60bd336f120c9b2e86fe94f3e39727479",
+          "bytes": 152854
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "913ecc775e4ff8d0edff16d9663c4340b36f68644e9b8975211cde0eb9f8c252",
+          "bytes": 9614641
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground080/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "345856e2242e1abdc10f8c9c04b057312d13f5bc87f498a481fbb01258593d97",
+          "bytes": 196155
+        }
+      ]
+    },
+    {
+      "id": "Ground085",
+      "source": "https://ambientcg.com/get?file=Ground085_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground085",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3a8232046579faba058a6151ee674e9f027007e49bb836abaab5d0c3f1d1764b",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "c74edefa1cd40aa0f36c86c27806d2cf50cfb5ed83adf09d1463017016d92313",
+          "bytes": 26751934
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "36ac9af85f4f3d702a45a9cf9b145e2fee5eadd55c269cc572c1c947232c53f0",
+          "bytes": 506962
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "f9290f121960a3d29dbcc83b0b78502ebcd68e8994ab9b98ab8323f8ece69ae3",
+          "bytes": 37594710
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "693b1af2024265566ede8430d2fea661e9c4333bb665bcda9a13693c7674b40c",
+          "bytes": 585099
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "c411050497121d81e178c091396cbb031978f284197cfe254487709d7a33ec6c",
+          "bytes": 12546690
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "112ca2d27d0bb69e78d365a80b1f9e7b2bff96fc4baf7da1090aed22c7bf3fa1",
+          "bytes": 449197
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "a185c1a9e507cd3a86a4f4d22d5ec7a44b7bdb80531c16228207ad13e6d252c3",
+          "bytes": 14547074
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground085/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "23cbef354d560e9867513938ae76f513618bd35a91d96a373bed420628688224",
+          "bytes": 596248
+        }
+      ]
+    },
+    {
+      "id": "Ground086",
+      "source": "https://ambientcg.com/get?file=Ground086_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground086",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "a68e85ae96c9f61399d84a8cdcb25b36d96b011e3842beca7a928ad388003d62",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "65ae8fe1a39435e7b743d38e5e7a8413f620622dbd89d665c600ffa2860ca9e5",
+          "bytes": 25792933
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "2553ea0262dc799ebe128dd325245d150b3614e888576c530c2d7d7e3781c12d",
+          "bytes": 486835
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "d9d56ea00dad69fcde4b0a5827ffc399fe3aaa4ff471f8f4a9063d6a3073bfd4",
+          "bytes": 31649273
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "c60f467bd5fef0ac9ca7c5a35f4fe3138d4ff33132756bc7d069e70a8c33f097",
+          "bytes": 476586
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "b4d4b071d41013a53008a6181a7b69f0fd6d29426f50a7f9c436763cf95567b0",
+          "bytes": 9428771
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "2c534fff881be35067303d8334e58a0f7227b12aa5a33fe6a74fa1eda833b57c",
+          "bytes": 313289
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "5bdd184ddaa8d0743885933c8f76adb25676f7698d2b2bd91089f20da6816b28",
+          "bytes": 11793468
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground086/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "035d663fbb8d66ced3a271d29f7662b4eb8353e9e6c8071cf09ac2d271573205",
+          "bytes": 450120
+        }
+      ]
+    },
+    {
+      "id": "Ground097",
+      "source": "https://ambientcg.com/get?file=Ground097_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground097",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "852e49a4cb8abc6e6d9f313dec37a9c98b8893bbb3aeb32241238c55bd44e054",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "6d8183bd37edecae72a99a0b5ecd5590db3ce50a50c9d6cfa1db5bc9fba80f88",
+          "bytes": 11282334
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "96bd7fe3656d6d0549fbc30320ae574f03a7ab034d5153973ca1070825513afb",
+          "bytes": 62202
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "293758d9d5947e24d6baf4e03ec008804c0cfa669d0309e3ff1e80dd7e08efe1",
+          "bytes": 24394056
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "81a319b105ce30e0ea71810799ea075389ad4c03b415ea45f85d5b4f50ae9b9a",
+          "bytes": 165865
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "50fdc8eadf99a7c82d0ffd72393b52616790c681801c0802df1fad1e7214497d",
+          "bytes": 12284361
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "ff0fa6beefd50bcb56736bf348af7ba3aedb5972cd23e59a915548211425dda0",
+          "bytes": 203702
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "ae5c3fd8a52001cfcfbc21c5082192d793cf9fef36dc17d0810f59e9b90ca218",
+          "bytes": 3943862
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground097/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "5ea574f32ef922ec565949506652fa26145bc39bc731264d59a43969d2fd41a0",
+          "bytes": 49295
+        }
+      ]
+    },
+    {
+      "id": "Ground103",
+      "source": "https://ambientcg.com/get?file=Ground103_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground103",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "8267509e6b99157d5c4f538b0ed4a2218f5b95001c639326ce076346f47da389",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "e507009004a2325bf3f2a9b42a0d5a3150025b863b99a23048a814a7d739fb80",
+          "bytes": 23246057
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "ba401df0a6d6138e2a8785e9255f44bdd8e7382ee033df71c70d1efed66a3557",
+          "bytes": 433774
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "d82b36dc53421261ac67b1b60ad22c877cce65baf6c4b5643e65ba600da08f6b",
+          "bytes": 34436603
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "9743001706c1d6dba18ccb59f2d372a661f7eabdc9348a815454171aa3383316",
+          "bytes": 520514
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "891dc69ab410ebad4b19a3189eef471b0a2152ff4a92f4ee66b4773d133ad5e4",
+          "bytes": 13583434
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "76603f8b96b86d5807ee5769b4077c54ef81d799ad0a563acb467ffce15bb46e",
+          "bytes": 495349
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "7428b731c3712d5575e93f30a78a0175b9bdeff989b9ffee089d7abba8b53446",
+          "bytes": 13760637
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground103/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "628665fa3b30b15e792588faa9cbbe4f398af4ea919ffe6f99bd829b692b386c",
+          "bytes": 555484
+        }
+      ]
+    },
+    {
+      "id": "Grass001",
+      "source": "https://ambientcg.com/get?file=Grass001_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass001",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "d16ce0597e072c0718ee0da90b2a21bfa22d5c90c218b34bc7eddaa2fd304c21",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "0a6ce2d9e4d0fd4c92c10b8411dac06577b4166f94781161d3127cd787c9be01",
+          "bytes": 26284782
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "f051b6f9a8bf75b51a9137560146fc6e826fad885563f0ee0ab3e683a313f848",
+          "bytes": 406772
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "ded7c61a940fb079b7fcd83b9ecef33fa500b1b3f8697ff2e8e5de5a5be96c9d",
+          "bytes": 41310481
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "52dfb081ab2f91155b008c04fdb377887f0341d4e54c3589fd207bcfae79aebe",
+          "bytes": 636186
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "8cbb70cf7b0fccbe5f8b9d1cf8cda103c21811f9e333a1263fa82937e1448301",
+          "bytes": 11779810
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "37b082a5f60fab069c4a03c413f808762be3d30a103a1b1f1b0b282196c7d388",
+          "bytes": 466855
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "65c7db5a889b34a86212106a0e921beab2dc5f8cde2640afe30c5ca01751ef8e",
+          "bytes": 14076302
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass001/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "6530e80d710c45f5c21dc81dfdc3aae0ebb98bb761253189fb28427a63349f6b",
+          "bytes": 554655
+        }
+      ]
+    },
+    {
+      "id": "Grass004",
+      "source": "https://ambientcg.com/get?file=Grass004_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass004",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "8b32b61b592b5b60558f76eedfc9adcb1787963dce2e679bdb9ee324c9d0e422",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "2494e4ea560c093d07b45835c5f9fb36c53de9ac8aff7bfc763da79702ff19fc",
+          "bytes": 28149083
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "a0a81b08066d2e4763685c213709f3b498e227c158dcb2a6a836dd08447ecc41",
+          "bytes": 535818
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "55e0aa5a47b21d438e3e13e4a65ff40afa37607b29da9866a4eb6bf61075c51c",
+          "bytes": 41508249
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "a675486a83ad549fe750e91a791c68527a2030bb18749e5fbb3ddb372982862f",
+          "bytes": 637011
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "9a06ae858f3a710b4df866415bd3e34bff3d5122f3f2a65b23e087bbde9c9332",
+          "bytes": 12315232
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "e4ad8643432ed9d5abc2f976cf9ff33e6cbaae3de2322198ab551b05dc143353",
+          "bytes": 501179
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "1ee8a1eaf2583406b86dd87c256e04d24bd3bd3e830378f5f162bea9f04a13f4",
+          "bytes": 14174952
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass004/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "a344bb2d8e96e7bbfd6fea28060244fdd550558a065a1e76725575700f70afc6",
+          "bytes": 557771
+        }
+      ]
+    },
+    {
+      "id": "Grass005",
+      "source": "https://ambientcg.com/get?file=Grass005_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass005",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "7e7deb7b97f662049bbc4f505f75810aa92cd588a4c4c188fa36de48a56ac9ac",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "b32aa4f878b5cbae18fa4cd70de988e225a9b6e3c729502e7ff4c9ea6967f7bb",
+          "bytes": 30251803
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "5f4eb9f940dcb7dfa8fd6feb52d95a2bb444210ea532e14f2be98a31d816db8f",
+          "bytes": 481599
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "837ae9553b882803372acf410cbccb2d9161148613a27e28166e94ba4ddc45f9",
+          "bytes": 41239819
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "13baa2456b41701e7cbf501463b6393c040acf1796887abe2221882bb00fb956",
+          "bytes": 520198
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "0bbfb6b96522fb3bd4d88ed3bf4df16d025f675225923e075d4f6aac4d702698",
+          "bytes": 13576455
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "f959896e589deb1b439dcc3ca637b49a42815a655b4e7a56c4c4582e3cea952f",
+          "bytes": 500411
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "d0a3effc40d512c35b821bad54f1dffc5c6510eff99eb6a93a95968b98edb4ba",
+          "bytes": 16725722
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass005/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "985f3cc1a108e9e91d4cd5d2b8ce96d3cb634bbac0a36f0ab7498be46730c3c3",
+          "bytes": 654151
+        }
+      ]
+    },
+    {
+      "id": "Rock020",
+      "source": "https://ambientcg.com/get?file=Rock020_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock020",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "04613f06c317d9a05524e44808108336921c4c7cc2fbf11791ed0d4392f6e317",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "1e86588005028da48548e4e5406db4b65b14da58c6666de9ba7f588b4d1aafaf",
+          "bytes": 19722319
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "18833972f9daf9073335c1d14e72c1a394b117c4de3558b842869bd3cf4a3015",
+          "bytes": 418517
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "576c42925d1f3f3acb92916902caf0f20283c11a2b7f7bd40fb759db5937ee8a",
+          "bytes": 25961024
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "dc47167df834853e990e906b94b117a9deb5efa3dd2b355a0451ec834968428a",
+          "bytes": 483613
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "20d7819f1cc5c937313f51fce3f8ae7fd95b4bb4a3fd01334a382ef148ac97fe",
+          "bytes": 8319277
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "a1018ab1f8dcf2835540d0c75e420fc3c53005644a301cc2769c9b1e9ff7d212",
+          "bytes": 218298
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "19714b656c52ea5e9fe16b6bfd8a56d8dff638cea3e287b30789feb601088aad",
+          "bytes": 3974551
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock020/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "680adaf86b07fef9985d15e99e5552b82bc969c1bd66e061fa8be1e3d3f72f6c",
+          "bytes": 184869
+        }
+      ]
+    },
+    {
+      "id": "Rock030",
+      "source": "https://ambientcg.com/get?file=Rock030_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock030",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "4af985ca8e166de0586def46e28f50a0550c8cce92fa69dbc2ef7f6034d056de",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "4f73f1f81f817d0ce4c85014c6d4aac8c42448d0e2070ef48ea61f4715eb2100",
+          "bytes": 22355379
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "6592a3efc88524b768fe51b41775e9aa40c0d65576bd4cb6b65e3c17c85af558",
+          "bytes": 429015
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "ff256a066a8613907c78e97b06622ac45e538f4f02e08e99efc7ab357fd631d2",
+          "bytes": 41433254
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "6ae50fe9beca207e9eff128114d1721718925a1b078254e31fde3dabfa84a306",
+          "bytes": 663666
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "d3121b97cb02dcea7ca5ae210d8575427d2bcb1082fffb86d244c5c084e957d5",
+          "bytes": 9073027
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "0ba9b4f65c98e914c5ade7fb0bc267728411dfb5b2bf4180d46ad217ddaf313f",
+          "bytes": 324755
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "a925847fcd42dfaf2de057c70fcb2524bda75f7b801a5fafc4358b32513ea09e",
+          "bytes": 6832816
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock030/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "e8d0ffaecb13f72f0d7972e1ddea668f3c20c1e4ed055b67070e9309660b6bb6",
+          "bytes": 239187
+        }
+      ]
+    },
+    {
+      "id": "Rock035",
+      "source": "https://ambientcg.com/get?file=Rock035_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock035",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3c3b7afcb97b4cee31a5bbb82724aa08437faf75b0e672119de2f8785abd8fd2",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "dd812533511a37927fe7a4f1cd2eda834a60feb6de308054518944de0783c289",
+          "bytes": 21348246
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "7073e92352dfda7fab6d3e2be13381351e7550e5897c28446d41651e12adbcad",
+          "bytes": 339533
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "16b41e034ca4d9fe0b77aa348d90310368dd0d2550f8754c2f530ab2480cfeb4",
+          "bytes": 41298779
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "8d3d537492ac0105c8fbc7eb980d6ddee35df1e72fff22bcf4431192d9c7a78b",
+          "bytes": 659847
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "b4d1e54ee8516dce7c2a781a97aaad8b5f9fd568630b92d18b12d659870fa745",
+          "bytes": 9206898
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "0bb046576e6657777906fb654d57448e31470dbc7e872d1a1a56701b05061351",
+          "bytes": 323712
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "2ff57334e5a8e6489ae74728232a0b68b08da43c24b92dcf87419d84bb9124c7",
+          "bytes": 6804339
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock035/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "4a5ebbe3d2cc4d2408b8a46af0dee81f8d6fa3c7f77e959093e6a63b6eccdbcd",
+          "bytes": 237603
+        }
+      ]
+    },
+    {
+      "id": "Rock051",
+      "source": "https://ambientcg.com/get?file=Rock051_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock051",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "db475bb4ebfd9ac8396d1d7ba29ff495fc8b8d1f95e1396b1e00ff61b6b58e0f",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "19264618c7f1ff02105de579b6bf8ac70dd5e7983ee5292cc52de57bd506849a",
+          "bytes": 25221157
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "91addd5f4937683e28e1ec54e421ecb8bca9ccf68903208cdf959d8ff8f4a852",
+          "bytes": 412858
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "21cd348ba50e09bdf609a0327de93d3d257ed2a52927e718e884d6a735d313b2",
+          "bytes": 32988452
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "042b77e3f0aeb28bc2a185dbc57e4cc88619e58450a8afc2afccf093dbd975b7",
+          "bytes": 427509
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "b8d331c8bf858c634819c3a962163e28c0f690712af93a208bf6c08f6edd6d6a",
+          "bytes": 8490835
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "c43f356156647f2d79bbcaf06a4fb3924e29a2ecbb650b1f704ec1028a7d88bc",
+          "bytes": 245287
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "f24545054cb0b4cdb314dcc2d4457ca7dd2f26894dacabf9e196f0fddb1c5810",
+          "bytes": 9273524
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock051/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "ab4451d704e788baed70a03f6a0d5224c697827098888b931e7ddbbdb900f672",
+          "bytes": 324428
+        }
+      ]
+    },
+    {
+      "id": "Rock058",
+      "source": "https://ambientcg.com/get?file=Rock058_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock058",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "f8328771f160ca5476e44ec3c172c91edb7f42fb33ef94b09a2a2f93278816d4",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "acad28ccb39f602ae7c1ff4552941d2ea0d4ca214087647a93e52ffd48d1738b",
+          "bytes": 17725887
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "dd00d5686ae722c089c5b2824cec910339c9bfb9cb17e24f317960de21aa72fe",
+          "bytes": 270827
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "216197d7bf7a3aff964fe0fcc1c528e350fed6e7caecdeda1f1a69c090418c54",
+          "bytes": 30353965
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "412484329a1146205ffed91c5d65d986337448f561bd60e947d77726b4faa4fc",
+          "bytes": 404651
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "29675dae98993654bef3be40d40f589586c9f7875291501a0cc8701ca463999f",
+          "bytes": 10904726
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "822b4b4bc63c0931ce1e21cf7a552d4a33d4717ea626c51916f106c177df4026",
+          "bytes": 417322
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "fcc66cf7f8a482238af1e9b021bb218b644da51455d21cc3a89d2917ac131cb7",
+          "bytes": 8199727
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock058/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "ac2b9a99f27282c09849c5f8dce03ae8ac83c2923f01964318eb5e4b50eb1417",
+          "bytes": 227299
+        }
+      ]
+    },
+    {
+      "id": "Rock060",
+      "source": "https://ambientcg.com/get?file=Rock060_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock060",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "861e8a768be0d5e7003d82b6f9cfcc5dc9da7f334cc798aaaa1e79299c11e567",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "af925e882753022d0fc517325fbcca90fd53d4b32a4c0d1f562eb5aca0a217c3",
+          "bytes": 16080023
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "1dab2e5676a5d4f52dba9a1347b930f6a31725087c210b3681067f157a1fbd05",
+          "bytes": 248430
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "64254c839f51c11356426660b73932960cf95e417453530a5dbf87ed3b344c61",
+          "bytes": 27623849
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f6c5120a22f7bbd68c21d5de323d905e7b5f6b2dbc47dd067eac631d2c5b5484",
+          "bytes": 415331
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "2433a042be9168df087ebda1eb3c7b28dec1de9741cd829e6f69fae2917f66c1",
+          "bytes": 10507051
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "e6aae9cc0ddaa54ad86740305cf0f456646ac7bd2b500cfb1be294f5cc7aa221",
+          "bytes": 403391
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "1d0ae594fb1e8de01195661574956c19494a3b3b48a6f2722af1f332b76031a2",
+          "bytes": 7349128
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock060/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "6d93eeb0b55b87343f84060f3163ff09b49094bd11bd32a6c46b64be787cf18a",
+          "bytes": 238704
+        }
+      ]
+    },
+    {
+      "id": "Bricks059",
+      "source": "https://ambientcg.com/get?file=Bricks059_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks059",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "84730c5fca9b0b692cc99279496133af139ffe5851e34884d2ec5122b7e07d23",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "91361d5f09af2e3caa4afb2f2d973b32c147e8a6aa138a8d7b56b6173857edcb",
+          "bytes": 23407549
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "9f24604095046ce7bdc76735d9da723e6b171fe1abc6e5aa5db9f0860fbf1540",
+          "bytes": 330812
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "5f095a10ae4a1b2bd779a7bcfbc077d949f7928e5156c984c96afb5ef5de8f31",
+          "bytes": 29133051
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "33556c717a6788019cd2855f2f106ebed39f85473d39770068b915a86d3e5b4a",
+          "bytes": 316463
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "1745702f63f929ebb2dc98b621d042ac95e6283f44d45475636426a7def5b16b",
+          "bytes": 8326433
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "7a97028c746fe7a2573ff8bcf795c85a57c1b9afc01d76d2c425a351d3f6c616",
+          "bytes": 295656
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "d6bfc0854841038b40ccb2c2ac96bd50ff89eab22b94ca8786bd18a030535a17",
+          "bytes": 7885642
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks059/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "bbf3cea3a508e8561b1f81ac166cacb9284d9fab7ef42c99e1caab114e815854",
+          "bytes": 226592
+        }
+      ]
+    },
+    {
+      "id": "Bricks066",
+      "source": "https://ambientcg.com/get?file=Bricks066_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks066",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "81d3e9b25ac58beeb531527823306fac79cfdf4302a75cbd29fd22e0aa977d6c",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "4c346a67fff56e2cbcc28a37a5417efe56dbc569dd0cec45a01f1bc4af7d4d91",
+          "bytes": 14542282
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "a142fbbb0ffe80538ffc8a0f5bf7b187c441c46b2c4acc7da12939073f9753fd",
+          "bytes": 309888
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "f03ff06fac5c39734b6e48ed989f56d412ee7a03ff0641c942cba17baf991afa",
+          "bytes": 41036427
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "d04c2760e4851d74b0b7000167a518c2d60ccd31585bc09f7e9a800bbe99275c",
+          "bytes": 295602
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "6a0672b7bc7bbb6967ba75de6a10abdafe74a7624d40159207400c4017fba599",
+          "bytes": 6722316
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "f6b965a5992787af2cc7ce5e5a267cff5737522c8a443c81cae129d39abb1e86",
+          "bytes": 121044
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "0f8d962ad2c865ab25cb56a112cb282e73315dca5087912e31687bddb5df06b9",
+          "bytes": 12411995
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks066/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "091fa6df26ea279cc44f320b5e14bf91f0968078567f978b3b3f4bab3974ee1e",
+          "bytes": 283389
+        }
+      ]
+    },
+    {
+      "id": "Bricks084",
+      "source": "https://ambientcg.com/get?file=Bricks084_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks084",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "30c90c3d7ae9ec54a4e631be4d1d39edcb1645be7f64f56f309cc2d2c46590f6",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "4d5c38831e89699bd3467fdc190fd8d42dfa126a4510de8c92cb0d91ac84964b",
+          "bytes": 10129113
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "569fcf8b5d136ee5caab55bcc019a2a2c71f604f3b1f792d1d44d66885124b43",
+          "bytes": 251485
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "07d531e4e2cfd3f8a75e751706809145ddc0f18ce230075626ac92331470bea4",
+          "bytes": 16270846
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "fde119045110aff790572ceeb232560b31cb56d2e030da27085dd149e5f9e042",
+          "bytes": 425709
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "09c8b88d72f0335c2367a669b6493495e586e41b447fc5b8ee26cd516b3e0b1b",
+          "bytes": 4349975
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "418cc8afb67efae67c4202dbaf0cec00d6559d2c7b32dc2532ecc46c44899c8c",
+          "bytes": 230134
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "84c3b2d2782600d128e1ccfe9585cd02b4f1af5700904d10472b38023056b1d2",
+          "bytes": 4313908
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks084/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "3ac005db32b84ead4b92e898747f0a54371dad17f2ef4b4c2d30da4c932e307d",
+          "bytes": 251792
+        }
+      ]
+    },
+    {
+      "id": "Bricks094",
+      "source": "https://ambientcg.com/get?file=Bricks094_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Bricks094",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "95d6c4432be59e5ee773adf923215ba860c8550dd4c94a8a064b58944278eac7",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "d7d413510d81b1415dc8e29f12aac1f817d29e0f742a39a8f2012a7e787300e2",
+          "bytes": 10852301
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "e10873c22d79d3bdd0a55a65897bfdb30af2a41678e6fcec5c110eecf046cb0b",
+          "bytes": 335533
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "83bd49686615d4144a2d6153027017750c97505ccafd3ef0afe1dfcce4508304",
+          "bytes": 14930442
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "a2e060798dc5e94ab919022acdf2a7b411052292387cfd2f726cae3735a46db7",
+          "bytes": 403202
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "a4c1d9ec610c2ec22c21caaf0c179d52271946055aa05d37676546c0334d602b",
+          "bytes": 5386819
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "61cee0f8f8c24934dc14eb8cab470238ceb6d62e9219651724c3aaf620737f08",
+          "bytes": 356258
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "b5bbe6fcf85eaa871d788f0475026555511956f74e217a6155ecd78f26e9e38c",
+          "bytes": 5561534
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Bricks094/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "9e29760b34ec1ef558dbd54d4b8085174e10a80aad57d4939ae9bf1bae3edcca",
+          "bytes": 365768
+        }
+      ]
+    },
+    {
+      "id": "PavingStones070",
+      "source": "https://ambientcg.com/get?file=PavingStones070_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones070",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "ada3c099394b1704cb5db7164a45c6621fd15cc6ea8c71deabd97da644318cff",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "3729ad51bb539ee9477016893eda678975cd2730917c87f0a35d4f7b8969962b",
+          "bytes": 26942614
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "fce6379948bcfe0e12e4b5b5e2c2da9dd2ee7b01381e0a082a9920f92c0a5026",
+          "bytes": 503353
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "02656b25e90344804cfc4e8eb49a038f6cfb85cae387b2a098f84f5c0951a30c",
+          "bytes": 33921422
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "16f22558dde7c831fbcfcd0d7c7e0d58c9a15ebd80d90a3e4fecb862225a89d9",
+          "bytes": 493155
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "7d819375a5a7ee75f54a0baa8e6afbe2151e9c4a0fcf77b728b23c45d8de2168",
+          "bytes": 11143421
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "c293c9b202f3140b1fcf1271f50e9758cab1356984249a4f7a989bf9f90c9183",
+          "bytes": 238541
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "9418900709cd98b81c9157c038af7eabdd08c0d04de970e17c5179d4522d4f56",
+          "bytes": 4364718
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones070/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "32e49d2bb9a92acc0bd49a5419e11b65e484f348692f1010284c252370a4b494",
+          "bytes": 247289
+        }
+      ]
+    },
+    {
+      "id": "PavingStones128",
+      "source": "https://ambientcg.com/get?file=PavingStones128_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones128",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e99c716eca1d507d6cd6abaf3d6a3fea8993ea79043a1a21f18ab51777a0b692",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "95f6915de5a1c511ed303e548bbfa93d6e4c79c2cf74d5a01e32dc379fb08341",
+          "bytes": 22967887
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "ce0cb08d29c061479f2903f4c63f29a10fc342a430bea93420125fe4480b6bce",
+          "bytes": 288387
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "d04891ca96d2c586e8e98b51b131054c8630c6153ac54e30b57dd0bbb5054923",
+          "bytes": 37518969
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "8099414801897fadfa09c6f5c16f217b6d7b6e148137b13e0ca06bd1bc72d20a",
+          "bytes": 326194
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "af205b042d0e29258823f9d3ce0898d1ee3b8bf79bab5c04b14cc03a2fbbbb0b",
+          "bytes": 10128203
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "33648cf8edf1c57aa279d5ae4434664459009a3aff91fbb75e9886d93c881c07",
+          "bytes": 269038
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "5ee8a0a1201363b0b7dbfd5e4b4f0695a36f0de4b87a8b6c6337988f6665d027",
+          "bytes": 12625862
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones128/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "c77834a8900058f818111d9da8115492df0648241524084116f58d41116c4b06",
+          "bytes": 412749
+        }
+      ]
+    },
+    {
+      "id": "WoodFloor051",
+      "source": "https://ambientcg.com/get?file=WoodFloor051_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor051",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "b865d3dfe14e17008e12471af4e6bfaa7d9bbff1ab7ed846c09c52be1f9279ab",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "d0282585a8ec84aa3f58f4081c25ca9ee12efb4c7f1c7814f89315d3af5f7a8f",
+          "bytes": 16728805
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "454b26825985794906af1efd29a49dfc6490d92e2a8f623a004644c37a80a126",
+          "bytes": 211817
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "66da2ea87b9f69562d3962b90a7081c675f82b5d60ebd65e6525653fc51564ea",
+          "bytes": 14400184
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "068bc0c479703338729763847d56559d1342dbe494f32f38f7ed94928b0c3c9c",
+          "bytes": 98048
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "aba1e575086e67c4cd1c40a1d3aaae368ca8d3c84f4006d91215aeac499bac96",
+          "bytes": 5626729
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "778132c9845572242f664907466de11e25b294e902a9378bf414f9ef46c0fae8",
+          "bytes": 188795
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "66ab37305500552b75a358dba39af7d05da1e9e3bb7b120af47570e8985cc5e0",
+          "bytes": 1204961
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor051/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "d0ec7961ed7b32ad8d1ff8868d5e312a3e25ebf7cd766b860ea2254e08372038",
+          "bytes": 89068
+        }
+      ]
+    },
+    {
+      "id": "WoodFloor043",
+      "source": "https://ambientcg.com/get?file=WoodFloor043_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor043",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "b3173bf3c51b3723c7f3cc91e0393235dd1ad9d840ed4c17f1966940bd711ba2",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "e6a9439dd30c6e3e06f97a0c71239e5bf6bfed166abddd5724c878d39f4d2131",
+          "bytes": 10674955
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "217ffece73036dc3a8454c51441c3f267db810c2a0648c182e921d3cc3f92c2b",
+          "bytes": 291548
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "58a72be2ac59455226012bd05a41a0ec9e28b91d723360cc1dd083aedd79f41d",
+          "bytes": 9853014
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "08bf586caaca121d493c44efd7e64f4ba6733ae1eb0403e36adf48b4331ebed5",
+          "bytes": 119901
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "c187ee9745b9e31c38cd720fb5c80c7b2919cc73c8b7a905ebd8039d6cd7ff30",
+          "bytes": 3225294
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "986a49ce6fa0eba0bbba37cafdc6c976eaad9437827894e2992d012d613b6c8b",
+          "bytes": 168674
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "f06c67aa291ae0872e214dda9884b31550b4f068999cace446df8ce332d5d39a",
+          "bytes": 2534352
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor043/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "ba91c6aff2ad0604431ea453a3352f04b094bfa4a9077eb52f421687fce58f02",
+          "bytes": 83860
+        }
+      ]
+    },
+    {
+      "id": "Marble006",
+      "source": "https://ambientcg.com/get?file=Marble006_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble006",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e99aaa9e4ea8b907ab679f3f5d809103b7c154fba1d7d1e2bab7cac6b740d383",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "ec05915901eb74f0cdffc8ba34154edede63bd7238363cfb965e7dcbd52891fe",
+          "bytes": 20771559
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "1303971d255c62065a357c8cf1b11253f438fa53256ff0d95f365d229d79802d",
+          "bytes": 369253
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "f98b70f5017e17f5b2d944899f9390dbdd001d85d9d491b194e59cb621c60928",
+          "bytes": 7853641
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "9da331ed3f59224e5b83869b8757fe6bce59720961ff5d86c88e15cc2b6aad67",
+          "bytes": 17144
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "ad600015393c0e3ad0dc8e64194fe8316c7772f8502b4514a3441395e6913c32",
+          "bytes": 8304425
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble006/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "d8af8338cd51bcf4df7ff02b8d324e86754bc08eb26ff29171dc48f0a98b4422",
+          "bytes": 199199
+        }
+      ]
+    },
+    {
+      "id": "Marble012",
+      "source": "https://ambientcg.com/get?file=Marble012_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble012",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "3aeb5bd63a9371d5638c33c61d715683bdab30234d3d23a8029ca9fe6e35fc59",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "c529c3d930a56961608f7d2e2470fb13f74d22a372a347bfcd14a1960adaf10b",
+          "bytes": 21486048
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "8feff2b8b4c94a9c627d787e0fc78ec1fc0f4d4bd42b8aacdb89053d666ae3ce",
+          "bytes": 362745
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "21eb712cc7c40ff12cf1916d9dd151c411c7b3f2a369b860a4da3f0918785470",
+          "bytes": 7528457
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f22eec0c5dfac3486c1b15c3e8d3098f18c6f300a39ff7fb01dcff281d5b60bc",
+          "bytes": 17173
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "c008d5fe135920b038cdf43b02dbf02d4dedeea25fb8664beab95c739d810b84",
+          "bytes": 8635836
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble012/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "744fbb331f2f11742f6dc0bc717a9ad94d07f007be7508f8711245c530f75285",
+          "bytes": 212530
+        }
+      ]
+    },
+    {
+      "id": "Moss002",
+      "source": "https://ambientcg.com/get?file=Moss002_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Moss002",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "75f12a93b0632f867e321385ad024fc21180a419fc3b8740165ff774dea4f21c",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "b3bc5ae6f24457094ce8f9cfbde0d27d052c181d4e356e49a9fb69fcbeae86d3",
+          "bytes": 28662885
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "a56240716f41519eaa23c5526214803f1ce4bcee558029cd8baced949fcb4325",
+          "bytes": 485852
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "f61062ee68c838dcef3d64adba98f77c495520af41aa9050d401e1fc85ba069a",
+          "bytes": 45267633
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "959d218f309dbc6421163613e40b40a5dc198b121b8b487bdcd5149b9f949e48",
+          "bytes": 594495
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "47fb0660be11d271146e4a65963b359fa45b61db2dcfbe0b18148eba09649f13",
+          "bytes": 11289850
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "47e5e5890988125ed27b507fd66262b0e1125f029e3c812ed8985d39063f6dbe",
+          "bytes": 417455
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "40c58864897b286fe82bca78101e23c68e96732d97523d30329bf3b28aa73a54",
+          "bytes": 16254817
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Moss002/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "629c3db04556977fb90968e1962b072719bc3794283097601b97ae5b505dec53",
+          "bytes": 610675
+        }
+      ]
+    },
+    {
+      "id": "Gravel023",
+      "source": "https://ambientcg.com/get?file=Gravel023_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Gravel023",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "c89a65685ca9992d5c556c43afa9268012bde441c8b644fda437047844155baf",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "bf5394642b5199cda6a63dd08c7408fbb0a090fbe08f62db0c27346465581f68",
+          "bytes": 14829261
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "16474bc8cf0b62be4b47654f9a156e162f6d18817e4ac4d411821fed99282a38",
+          "bytes": 339751
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "fc73ce36a3e4cc758bbd657ae1154aa2d4333d45cca147c601ef02cb1143821c",
+          "bytes": 35042224
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f521a5a80331364c230bbed2dfe1d8f990846854691548cd3b80ca883540954b",
+          "bytes": 644919
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "c4900e32385d0c096acc9bd255f1f8bff3b5cc65402a746eafc5a80035c832ff",
+          "bytes": 6367245
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "1addd5fdab81e6d1fa5a80227218cc062958be0d8c852ee1d3ffb6b85acafc4f",
+          "bytes": 223237
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "6d4e6215bfa28eb6d2172b07537ea639312de8293fa62ea069cd672bc5db4004",
+          "bytes": 10714616
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel023/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "3108a63708d759d3a90ad623652fc2dd06e50b2091a27037c96e8d0460fb55f1",
+          "bytes": 553659
+        }
+      ]
+    },
+    {
+      "id": "Gravel041",
+      "source": "https://ambientcg.com/get?file=Gravel041_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Gravel041",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "69dc669fbadbbddc992ad3e4cfbf5554ec70dfe3c8161816fc70d41be47e9bcc",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "f8a823874fb28505d3b87085f39511e5e0487679cb7b969e8f8c485341e8d403",
+          "bytes": 22107725
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "1f46db3a0d500605bdf84895353b5851f7dc279c32c07af7540b76fb9471749b",
+          "bytes": 484156
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "ef0f5920a924631ad2280a78503ff08bdbdc03f9f65d66052e382b91677e6183",
+          "bytes": 29753195
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "4848dea9b4b6cbc9e38ec19e434d8b96235b2e0374d854cf63329a9b8dc6f630",
+          "bytes": 614452
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "433edb3d4cc5145332facffb96f30160f662b0ed212da4e86fc0a0d45cdfd608",
+          "bytes": 9763436
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "49fe3e7751d5a5bdcf03594130c36793702608b9478996ddca1311bba37405a3",
+          "bytes": 393292
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "31273789532c504576b772f197a0ced4e61db8aa8ecefb4607890f3c3c3454be",
+          "bytes": 9503699
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Gravel041/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "c3812ad9ff74c0b3b2ba3c91ed50ace16ca4ee42667d724d49f5b80291b9da02",
+          "bytes": 453635
+        }
+      ]
+    },
+    {
+      "id": "Ground104",
+      "source": "https://ambientcg.com/get?file=Ground104_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground104",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "db88bda7898f174c7d3e443c8078263cb79293bb17c5c78bf2d3efa7ab2132c0",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "3fa0b306ec73dc44a062dd5827967f64256fb5757e2cc30963d4ee4150f68c4a",
+          "bytes": 25016017
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "d20fa7e076436ca81caaaa20d7fd9072b8c133ff2a42667a59c6f2e2504a710c",
+          "bytes": 440792
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "1474f3b93f1a597be0f2eff576823be90cf0380bac806ec334ece4236b2022e5",
+          "bytes": 35509764
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "2980ac1e04856ffde71abc713e65a0562401a5771c584a095fd0d7ba66f79780",
+          "bytes": 551192
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "dee867f0e551ced904ec911fbb34bdd3c3335e3fc58b5e38446bb848024e05fd",
+          "bytes": 11068275
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "4cbfab0e9d830a8b13180affd15c71f81e7cc7b1a579cec6348a5d32bfda8e47",
+          "bytes": 374190
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "5750250bada4b2b4a929a8aec69010412d0ea874992833c2061e1e64ef5a7c71",
+          "bytes": 13224107
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground104/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "90feaa83d43b97a69b26c889e008637a7b48eb984d665f26725da7710f2bf98b",
+          "bytes": 525794
+        }
+      ]
+    },
+    {
+      "id": "Rock061",
+      "source": "https://ambientcg.com/get?file=Rock061_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Rock061",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e7d4b49a3be2ac42d3ff4a593d38127aef0613ed3a5bd0d9e3fc292547c79a1d",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "302e7beafc6677cc566005ca0a8f9a731ef1d443fb2ea95816b466f3df4ae91f",
+          "bytes": 14441084
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "6906ee84cbc7921d4ee9b515e7b31e64c501c7e638c18c83e063e171552d777a",
+          "bytes": 227534
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "99982aa0a8892fbb8f5f1df94e00287db3f52a490357418b6936b6bb20369a79",
+          "bytes": 24652163
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "aa793df605797c87b94d7c1c08a1136ef0d24304de566146d7626b11a1f3868d",
+          "bytes": 340547
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "e7c0d7016816817948404644bcbf3c7c5f0d1baddc977e79f28c524565b06fa0",
+          "bytes": 9903136
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "71d98a7119038f0579032c5ea3ed4ebf142afb7267160ee4dfea3019f95c59c0",
+          "bytes": 371579
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "b210cd8c3cdc3e3a73d39b4939d49ef74b3a3d918558e685f80a107534a9b9e9",
+          "bytes": 5942773
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Rock061/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "a8fc530e7174e9ebfd96c0e829f4406c52b9eca2e01cf7feef03818d9f73d530",
+          "bytes": 176565
+        }
+      ]
+    },
+    {
+      "id": "Ground105",
+      "source": "https://ambientcg.com/get?file=Ground105_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground105",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "5b872810ad176a0251f6e93e1476cb2260bc048078076001b05177794f6b124d",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "cf5c05dbe8db052749f4a90a77b4646a12e0505b6cb2ab51f0c301ae2e809ea4",
+          "bytes": 25008722
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "ee2cc0e243276929999fb61a2ccef846173ac592e3b959f09aeff7e789d4ff08",
+          "bytes": 403320
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "41a13d97ea0274f014f56e189f3d30c0ef61db9d80bdb0a78449515b885f60e2",
+          "bytes": 35330583
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "4c8bbdf292d99ca684d5f5802e9a655a2218108dbd05b66ee91400b5af6db4c6",
+          "bytes": 467961
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "9d9c1183aba0a91d8d6c168f1e21ec3b87d5dc192b157b7a084184f36d0fa85b",
+          "bytes": 12410110
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "4aca64f5f43c33582e4e24d81d2a4417d62ce19d767d474d010e9bb8f06bf156",
+          "bytes": 384596
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "9860656b6121fc42db28b599eafb04847f24d189835bbe4dda43684f1187a552",
+          "bytes": 12418077
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground105/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "e0af2554afbe90be47784f07d72225fb6b5dc152422c5629a0d71d008f92e49b",
+          "bytes": 409858
+        }
+      ]
+    },
+    {
+      "id": "Grass006",
+      "source": "https://ambientcg.com/get?file=Grass006_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass006",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "ed72d6e78d99619e1531a2072c4ba3ea45e9682546a0c599f4ba7af77737243c",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "5bdb2466b9c7a7f8a1cdd353d1667f7280f9cf52c269df84f8a3e2ef43ba5096",
+          "bytes": 27689705
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "e624bb83632272ddbd1157071706626a7f0ccd58c2de1dd0838e7c8c591b986d",
+          "bytes": 462667
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "71c25aeff3cb4afebbbf6d0038a497ccb52dc0c8da943744794f8462dc257c23",
+          "bytes": 39066021
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "8b080a318bc899a2e7e1311f9f556ed6201300dfe2b5665e21a4f9632b1ed7d6",
+          "bytes": 537220
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "9e0c70e36b9eda38739895d133a1d569e604277aef84d074d2678fd2803df3be",
+          "bytes": 11581032
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "590e63c0a967f7016a3c0bbe0dc7165b55d1d332bbaf4276b1ce59cb0bc5086c",
+          "bytes": 417613
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "2bf3deba4c69997190795a6cea3db55bdb0b5db44146e0e1f571aa78dc2be33a",
+          "bytes": 15930417
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass006/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "59c11d46c1b963af716b6420dae965e860cce9cff1a4517da35c24fb99086c95",
+          "bytes": 661124
+        }
+      ]
+    },
+    {
+      "id": "Grass007",
+      "source": "https://ambientcg.com/get?file=Grass007_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Grass007",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "c007bf43c1fe6bbad34e33560e2e63ae2207fbc8ba14e193baf72983d130701d",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "17073aea6c774a4d47c149931b5378b239140fc74c7a8e76f1094ccd80267e79",
+          "bytes": 24986443
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "cc21bfa5ff1ad0f825dd947cf1b15d6b5dba0b49ae0ee04c360a5a1f02428440",
+          "bytes": 415370
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "bf1789ef0e15e36c1b4c2e13f570625ebf44de88e73c70a33d057deeef715b91",
+          "bytes": 37443882
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f39829fbd0b5fabc87380b897424e6acf6b8d82425787f06a1e70d92e49d5818",
+          "bytes": 538928
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "43ca992015d8ebba16e5751fffc84206ec4fb25e2d325de978102fc2df85f952",
+          "bytes": 9463544
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "b6fd10f4aa4048720e95296054bcef83372bb0fcba5cf15982b5d074829f5f59",
+          "bytes": 292627
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "b34b1ee8b366f9b21940b3d54c7b85c1e5b132050beb0b413df5f5a9982c841c",
+          "bytes": 15133415
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Grass007/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "ad21a1ff04db25d05ab535f0bfe93ee86fe8aec7d97152328af835683400e487",
+          "bytes": 635464
+        }
+      ]
+    },
+    {
+      "id": "Ground109",
+      "source": "https://ambientcg.com/get?file=Ground109_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground109",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "e40777d3f678e94926ee81826d40abbb01fd2c75c177f37e4f1a6af5ad4b5506",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "aef83c2779c5928bfdfd24f7dc213f20fb91e7cc93ebe74b7c6f5084d8bbaa2a",
+          "bytes": 22721112
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "ffac8b6538f033ecac19d8c448d9cd72d21996c84cff7ceaca5b91ee6bfbb998",
+          "bytes": 376406
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "1e1aa669acad238aa9942a20cfa9136e1b023696cfc3e79bc3e64e56ef555a4d",
+          "bytes": 34004151
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "5d06948e2c52b92af6b0b29a531e9a6deac32bdde3eb852248e3d1962edfb831",
+          "bytes": 426610
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "e91d123aa14e980700cd40c054ebe1b3c919fc5ef9a8ea9b6ee310131b647d36",
+          "bytes": 9583210
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "46487fd9872c80a7240c27f7ee769a7ce7be23fe97c22243e502f5f3e21a5bc4",
+          "bytes": 311914
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "4d375ea4b0d7ee9599be38b1c5e31e81e83b37daeae6105f517a6d6db5357000",
+          "bytes": 12838661
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground109/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "ee5617582e030382b54e6bc30cdba2a881d45ba9efac60a6808dc70899523a27",
+          "bytes": 431540
+        }
+      ]
+    },
+    {
+      "id": "Ground110",
+      "source": "https://ambientcg.com/get?file=Ground110_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Ground110",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "a065ad99a9e9993408251e045834f2ab10b2a5793ea7087b516b280658b66524",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "88a11e684053b53f41e8cc5d1e07a5223b58f49174ca360cf00e46345b62fc88",
+          "bytes": 24014139
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "815f649d261cd65d9da439845e56c6c9c817bd75064ba767ae893b5a426443d5",
+          "bytes": 521138
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "79ce5d195c7dcf8c99de49f63c6280f9f828d92cb324a9ef89f3e3d0088ee13d",
+          "bytes": 35226091
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "14d18663b9152c4a6856b28075b78eed12d8aaf7e0c198134c0e5c49683797f5",
+          "bytes": 600501
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "fce02cc9cad417060abf0099dd5cafa575196d83cef6cfb1662b6e1b322c8863",
+          "bytes": 10693233
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "b4ec45a5f69455fd6ef0a52b536e2bfc7b7ad8ccb54025cf773a1540125cc147",
+          "bytes": 439034
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "4a8e5eb280b1b12196a365361a51505434af0b4cdd1e8dc79d25ddf606469c04",
+          "bytes": 12903011
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Ground110/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "04950038878c3f71a2ac5e0e94d69dd51867d5a2aecef498406e126df23fab35",
+          "bytes": 546518
+        }
+      ]
+    },
+    {
+      "id": "PavingStones138",
+      "source": "https://ambientcg.com/get?file=PavingStones138_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones138",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "59b2d58069a6daaa4b71df7478d4112d44a0076b118cbddbba0e3ec6ff2987a1",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "f364211db40debdb41e8eb19b16bbe2ca65b0964e4570d745cc545c13b195a27",
+          "bytes": 13334689
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "215149b834fa13849f483e001cc255ad9619b92b24ab6b3fe37a02ba35a68afd",
+          "bytes": 482368
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "2ee259b8ca8b265467cda700a5694521bc58f5eacb96483494fd46026fc6dbe1",
+          "bytes": 14600153
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "a844d6424749ad313958a03e80340160e17bfc0ce8c80effbe62db6fe2188adb",
+          "bytes": 300665
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "7fd58d36477ad5f416d1a90aa3832c7d0cfbc040cd64340413abcb19ff106da0",
+          "bytes": 3801572
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "9f0ca0ab3b141b51643e589c611d66effaae86d0523169370c64c97c371c79e2",
+          "bytes": 202061
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "829236eabda002da025dbbd86bffd2a93f008e0dcadba021ecb4431a031b047c",
+          "bytes": 4972892
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones138/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "9902fbe737a8587525ab0e974cfc8237688834391017adac72ce8cb470f61aed",
+          "bytes": 254460
+        }
+      ]
+    },
+    {
+      "id": "PavingStones142",
+      "source": "https://ambientcg.com/get?file=PavingStones142_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/PavingStones142",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "2ed628282465d869a176672d7ccf1773f2ca819f626e5bb7b91b3ec82c0a0289",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "5f0ce291b1844b8b61d8fdf7cfb723681bc52821f58d3ea4cc69a0d670a32a9f",
+          "bytes": 22908952
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "1a99fd1ebbf8b399485c8dcd6b24c1f9cdd5384308d59f763a89b6eba1f1172a",
+          "bytes": 461560
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "a02d3bb7801582eb54965d5a68c095d11b4ff6e26b30e308fcd74ef82ab74021",
+          "bytes": 28211462
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "157a2c938d708cb7a45a16ea899044d4805183a444b989e7f3a2d2b2cda47101",
+          "bytes": 354581
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "3758d95ced73c6a27c528a2194baba2503ef8eeaa893e8782d28a05f32697883",
+          "bytes": 10919213
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "8d9dda87ac8b57fef7aa897105d2a9a2be2d13bc0f1d23d627120643c3966075",
+          "bytes": 351227
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/high_ao.jpg",
+          "role": "ao",
+          "quality": "high",
+          "sha256": "c086d964058b1abe87bbc02fc4062abc2e99e291ee3a69ead08748db53b33729",
+          "bytes": 9551489
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/PavingStones142/mobile_ao.jpg",
+          "role": "ao",
+          "quality": "mobile",
+          "sha256": "201f4eac5776b5bf15f5ca4c12976b6973e8e6841245b2d6eb596603ce7c2ed7",
+          "bytes": 280254
+        }
+      ]
+    },
+    {
+      "id": "WoodFloor064",
+      "source": "https://ambientcg.com/get?file=WoodFloor064_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/WoodFloor064",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "200e9c577e2ab84e1e67ea51ceb1be712b8c851ed4a061ade499ccfe95641e19",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "5a9d3d7111867bba4a6c3b339e0d25d923a1e18fda860c7bfc3cd171aae75107",
+          "bytes": 12846999
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "2cade5015af9d1ba13a8067536d3628aef3f4f7b42bf734b40e40d1fdb3770a0",
+          "bytes": 175291
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "4ab06d7142c5e053de1519a5713b39deeb37c3da269c05538fcb0b10d381d4d3",
+          "bytes": 10934329
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "f0cacee705030da4111da61084dc96cd53486bf8b22607cf22bda0bb2b2e6c19",
+          "bytes": 51724
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "95b4df4303f5580e6d98c08d01db2ab4f1c820a6547e6214ad67a58cae63248b",
+          "bytes": 5204038
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/WoodFloor064/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "710cd0f44c1b314bb8c22789f50fe9be298fdc8d9e4a277cfa83437e8a06408a",
+          "bytes": 131747
+        }
+      ]
+    },
+    {
+      "id": "Marble016",
+      "source": "https://ambientcg.com/get?file=Marble016_4K-JPG.zip",
+      "page": "https://ambientcg.com/a/Marble016",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "archive_sha256": "fb26a74276519bfef287a6eda210ea312ac37ebecb86db9188761917665ccc56",
+      "maps": [
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/high_albedo.jpg",
+          "role": "albedo",
+          "quality": "high",
+          "sha256": "856510273a7309e28d75fd970cad272fe3c35351f0a87bcb8a8899abd35632ba",
+          "bytes": 13758616
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/mobile_albedo.jpg",
+          "role": "albedo",
+          "quality": "mobile",
+          "sha256": "7498c854c339760bc963db760c6f9f7a9c2757a492f48dee60166c76620f2099",
+          "bytes": 395250
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/high_normal.jpg",
+          "role": "normal",
+          "quality": "high",
+          "sha256": "056a68d9e296980650e4dc2c94387e51201af1c89402c380ebba0bdfdd50f7d0",
+          "bytes": 4719237
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/mobile_normal.jpg",
+          "role": "normal",
+          "quality": "mobile",
+          "sha256": "6f4e718727655480083b806b94bfe9db2ae3ad373577213e3fa891d6e8b8e9c5",
+          "bytes": 17110
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/high_roughness.jpg",
+          "role": "roughness",
+          "quality": "high",
+          "sha256": "4f7f0b40da0ca4dd48e5f7ccc1b501a60f5dc95bed85113e52486abcc4173e1d",
+          "bytes": 4350997
+        },
+        {
+          "path": "res://assets/enrichment/surfaces/Marble016/mobile_roughness.jpg",
+          "role": "roughness",
+          "quality": "mobile",
+          "sha256": "17f986a7787d8d7d22e8736c238754e6eacc8ce068230f6dd612396c57fbd4c3",
+          "bytes": 108112
+        }
+      ]
+    }
+  ]
+}

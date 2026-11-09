@@ -45,7 +45,7 @@ func run() -> void:
 	assert(state.rpg.progress.dungeon_0==1)
 	ex.leave_dungeon();assert(not ex.dungeon);assert(game.hero.position.x==20)
 	game.credits();game.graphics_settings();ex.hub();ex.equipment();ex.skills();ex.contracts();ex.companions();ex.settlement();ex.appearance();ex.local_map();game.close()
-	game.music.stop();game.effects.stop();game.expansion.battle.stop();game.expansion.foot.stop()
+	game.expansion.enrichment.stop_audio();game.music.stop();game.effects.stop();game.expansion.battle.stop();game.expansion.foot.stop()
 	await create_timer(.2).timeout
 	game.queue_free();await process_frame
 	for suffix in ["",".bak",".tmp"]:DirAccess.remove_absolute(state.save_path+suffix)
