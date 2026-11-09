@@ -1,0 +1,19 @@
+config_version=5
+[application]
+config/quit_on_go_back=false
+config/name="3LANDS OF DEATH, BEAUTY & PROSPERITY"
+run/main_scene="res://scenes/main.tscn"
+config/version="0.1.0"
+config/icon="res://assets/ui/icon.svg"
+[autoload]
+State="*res://scripts/state.gd"
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/handheld/orientation=0
+[rendering]
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
