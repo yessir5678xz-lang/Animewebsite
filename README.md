@@ -1,48 +1,80 @@
 <!-- coderabbit-ai-generated:v1 -->
 
+<!-- coderabbit-ai-generated-section:v1:0053f714012a8f44b80b9b9f5561ecc7558aeae1e05c9e272958bac939976321 -->
+
 # 3LANDS OF DEATH, BEAUTY & PROSPERITY
 
-## v0.1.0 — The Broken Covenant
+## v0.2.0 — The Living Covenant
 
-A playable Godot 4.7.2 development release with three stylized 3D frontiers and a branching covenant story. This is the first playable implementation, not the completed massive-scale AAA RPG.
+A Godot 4.7.2 Android ARM64 RPG development release. This expands v0.1 with modular RPG rules, streamed wilderness, equipment and skills, contracts, dungeons, economy, skeletal character movement, and ForgeGUI illustrations. The full original AAA-scale game is still in development; the feature status below describes the actual implementation.
 
-### Play
+## Play
 
-Open `game/project.godot` with Godot 4.7.2. WASD moves; J strikes, K attacks heavily, L casts an area spell, Space evades, B guards (timing a guard produces a perfect parry), E speaks, H heals. Touch devices use the left-side drag control and labeled action buttons. Use the Atlas to travel. Speak to each keeper and follow the northern road to its warden. Defeat all three and read the Chronicle for your ending. Recruit a sentinel and trade or forge at camp.
+Download the APK from GitHub Releases. Android 7.0/API24 or newer, ARM64 and OpenGL ES3 graphics are required by the package. Hardware performance requirements have not been measured. The build is debug-signed using the same sandbox development key as v0.1; it is not a store release. No extra data download or network connection is required by the game.
 
-### Implemented
+Drag the left pad to move, use the action buttons to fight, and hold Guard just before an enemy strike for a perfect parry. The right-side open play area rotates the camera when dragged. Keyboard: WASD, J light, K heavy, L spell, Space evade, B guard, E interact, H heal, Q lock-on, R camera rotation. Controls move relative to camera orientation.
 
-- Three separate 190×190-unit frontiers: Vesper, Lethiel, and Aurelis. Only one land's scene is retained at a time. Deterministic procedural scenery, original terrain/water shaders, lanterns, camps, landmarks, ore, regular enemies, and a warden in each land.
-- Light/heavy attacks, a three-hit damage combo, evasive invulnerability, blocking, timed parry, area magic, telegraphed enemy attacks, and faster warden attack cadence below half health.
-- Three keeper conversations loaded from JSON, three moral decisions, quest tracking, and two narrative endings.
-- Gold, consumables, ore, forging, level progression, a recruitable combat companion, and camp recovery.
-- Persistent progress, 25-second autosave, manual save/load, interrupted-save backup recovery, Android pause saving, and Android back handling. Travel/load returns the player to camp; frontier enemies and ore replenish.
-- Shadow toggle, music toggle, larger touch buttons, original synthesized zone music and impacts.
-- Android ARM64 export and a web export. No online service or downloaded assets are required by the APK.
+Speak to each land’s keeper near camp and follow the northern road to its warden. Three moral decisions determine one of two endings. Read the Chronicle after recovering all three shards. Use Atlas to change continents. Open Codex for equipment, skills, contracts, companions, settlement, appearance, and local coordinates. Find the chronicler at 12,-9 for additional lore and faction contracts. At night the chronicler walks home. Ancient Descent at 20,-50 enters a dungeon; the southern entrance returns to the frontier.
 
-### Build and test
+### RPG play loop
 
-Install matching Godot export templates, JDK 17, Android platform/build tools and configure the Android SDK/JDK/debug keystore in Godot editor settings. APK is a **debug-signed development build**, not a production/store release. Signing keys are not committed.
+- Ten purchasable weapon categories: sword, greatsword, daggers, spear, axe, bow, crossbow, staff, dual weapons and ember relic. Reach, cost, cooldown, damage and behavior differ. Greatswords cleave, spears reach farther, axes stagger, daggers poison, bows/crossbows/staffs launch projectiles, dual weapons gain a combined hit, relics burn. Melee uses procedural skeletal poses rather than authored motion-capture clips. Weapon mastery adds damage through use.
+- Equipment merchants operate at camp. Buy weapons, forge armor, enchant with fire/frost/poison, forge the original blade, buy potions, or rest. All trades consume real resources. Armor, passive Ward, and settlement forts reduce incoming damage.
+- Eight five-rank skills across warrior, mage, assassin, ranger and diplomat trees. Each level grants two points. Skills affect health, melee/ranged/spell damage, life siphon, dodge cost, trade prices and damage resistance. Attune the active spell to fire, frost or poison.
+- Twelve authored side contracts with descriptions, givers, rewards and faction credit. Accept first, then complete local enemy, delivery, dungeon or testimony goals. Delivery claims consume ore. Rewards can only be claimed once. No generated quest-count padding is used.
+- Bellkeepers, Verdant Court and Free Guilds reputations change from decisions, contracts and wardens and affect merchant prices. The three original moral decisions remain irreversible and influence the ending.
+- Recruit the sentinel at camp. It gains bond from victories, provides combat assistance and supports follow/guard/stay orders. Guard adds damage mitigation. The sentinel has contextual backstory dialogue; it is not a complete companion romance/relationship simulation.
+- Build mines, markets and forts at camp. Mines and markets generate treasury income every 240-second world day; collect it at camp. Commodities have different buy/sell values across continents. This is a working small settlement economy, not a complete kingdom political simulator.
+
+## Exploration and presentation
+
+Each land retains its original camp and warden frontier and extends into deterministic wilderness. A 3×3 neighborhood of 96-unit chunks is loaded around the player; distant chunks are unloaded and their living enemies are stored. MultiMesh vegetation reduces draw calls. Eight named discoveries per continent provide landmarks, exploration XP and unlocked fast travel in the local atlas. These settlements are visual landmarks, not fully populated authored cities. The wilderness is procedurally continuous and has no designed geographic continent boundary.
+
+Each land has an instanced five-room corridor dungeon with enemies and a stronger final guardian. Warden extensions differ: Death summons soldiers, Beauty casts radial projectiles, Prosperity telegraphs a large delayed blast. Core enemy AI still shares the original pursuit/telegraph controller. Loot includes camp treasure chests, ore, gold, and occasional potions. Breakable camp caches yield ore. Camp building collision is implemented; vegetation and most scenic props remain nonblocking.
+
+Characters use Skeleton3D with rigid bone attachments, walk cycles, idle motion, and procedural melee attack poses. Source geometry remains simple original procedural art. Four palette options customize appearance. Fire/poison tick damage and frost causes brief stagger. The combat finisher is a scale/pose effect, not a cinematic execution animation.
+
+A world day lasts 240 seconds. Lighting, rain, storm fog and NPC schedules change with time. LOW/MEDIUM/HIGH/ULTRA presets adjust render scale, shadows, MSAA, local lights, rain and camera view. Adaptive graphics can lower the preset after sustained slow frames. The renderer remains Compatibility/OpenGL; Forward+ and Mobile/Vulkan configurations have not been implemented or validated.
+
+Audio includes original synthesized regional scores, a fading combat layer, impacts, spells, footsteps and boss cues. Music can be muted. Hardware audio focus behavior and audio quality presets remain unverified/unimplemented respectively.
+
+## ForgeGUI assets
+
+The MCP connection authenticated successfully using the user-provided key kept outside the checkout. ForgeGUI produced three 1024px keeper portraits and one world atlas, integrated into dialogue and travel. Artifact references and SHA-256 values are in `game/assets/ui/forgegui-assets.json`. These images were preserved at their source resolution. ForgeGUI’s homepage describes commercial-use rights: https://forgegui.com/terms . Three subsequent panorama requests failed with insufficient_credits; no failed images are represented as delivered. 3D generation was refused by the account’s paid-plan gate. No account key is embedded in the game or build scripts.
+
+## Save compatibility
+
+v0.1 schema1 saves without RPG fields migrate to new defaults. Progression, inventory, skills, contracts, factions, settlements, character settings, overworld position, health, mana, remaining core enemies, ore and streamed enemy records persist. Existing v0.1 quest guarantees are retained. Loading now restores the saved overworld position and resources instead of always returning to camp; travel no longer replenishes core enemies and ore. This intentionally advances the first build toward the original persistence requirement.
+
+Autosaves run every 25 seconds; manual save/load are in System. A temporary write is flushed before rename and a valid prior save is kept as backup. Malformed nested RPG data is rejected. Android pause captures state and saves. Exact dungeon progress is not serialized; loading a dungeon save returns to the land’s camp. Breakable caches replenish on land reload. Backup recovery covers interrupted writes but does not guarantee recovery from a full storage-device failure.
+
+## Build and verification
+
+Install Godot 4.7.2 and matching Android/Web export templates, JDK17, Android SDK/build tools and configure SDK/JDK/debug keystore in Godot editor settings. Signing keys are not in Git.
 
 ```sh
-godot --headless --path game --editor --import --quit
-godot --headless --path game --script res://tests/smoke.gd
-godot --headless --path game --export-debug Android
-godot --headless --path game --export-release Web
+GODOT_BIN=/path/to/godot bash tools/build.sh
 ```
 
-The smoke test uses separate test save files. It checks startup, damage, magic, dodge, quest choice, save/load, recovery from a corrupt primary save, land transitions, warden rewards, and ending access. The native visual harness is `game/tests/visual.gd` and uses a separate visual save. `tools/generate_audio.py` reproduces the original soundtrack and impact sample.
+The script imports, runs both gameplay suites and exports Android and Web. Automated assertions cover startup, simulated touch, combat, magic, dodge, all weapon categories, skills, insufficient funds, faction-local quest credit, one-time rewards, economy ticks, save recovery/migration, chunk unload/reload, dungeons, land transitions, wardens, endings, and RPG menu construction. Native screenshot harness: `game/tests/visual_expansion.gd`. Tests use separate save paths. `tools/generate_audio.py` regenerates original audio cues.
 
-### Android requirements and verification limits
+Android hardware installation, physical touch, mobile frame rate/memory/battery behavior and offline device operation remain unverified. The sandbox has no connected Android device or /dev/kvm. Shared Chromium previously lacked WebGL2; native rendering was checked using Mesa software rendering and does not establish device performance.
 
-Manifest minimum: Android 7.0 / API 24. Architecture: arm64-v8a only. OpenGL ES 3 graphics are required by the Compatibility renderer. Actual minimum RAM, frame rate, battery use, and device-specific behavior have not been established. Godot exports and APK signature/architecture inspections pass. Native software-rendered scene captures pass. No Android device was available; installation, physical touchscreen behavior, audio focus, restart persistence on Android, offline device operation, and sustained mobile performance remain unverified. The sandbox's shared Chromium lacks WebGL2, so browser play could not be verified there.
+## Remaining original ambition
 
-### Known limitations and expansion backlog
+The complete massive-scale world is not finished. Major remaining work includes professionally authored and populated cities, extensive unique dungeons, hundreds of authored quests, full branching main-story routes beyond the current moral decisions, complex faction diplomacy, assassination guilds, character creation beyond palettes, full skeletal skins and authored animation sets, cinematic executions, ranged weapon geometry and specialized bow animation, sophisticated navigation/tactical AI, full armor/item loot tables, advanced terrain/LOD/occlusion, destruction, cinematic scenes and voice work, four audio quality levels, downloadable/versioned asset package installation, production signing and comprehensive Android device QA. The current status is a playable expanded development release; these systems are not represented by fake menu buttons.
 
-The original ambitious design remains the direction for future releases. Current art is simple procedural geometry; characters lack skeletal animation and portrait art. Frontier decorations do not have collision. Wardens share a combat controller and differ in stats rather than unique mechanics. The companion has no relationship arc. There are no hundreds of side quests, full dungeons, cinematic sequences, weapon categories/movesets, bows, skill trees, armor inventory, factions, NPC schedules, kingdom economics, weather, destructible scenery, or downloadable expansion installer. There are no four graphics presets or Forward+/Mobile rendering paths yet: the current build uses Compatibility rendering with a shadow toggle. Save progress is persistent but exact position, current health, ore depletion, and regular enemy state are not retained. Music and impact synthesis are basic. These are unfinished production features, not hidden or nonfunctional buttons.
+## Architecture
 
-The architecture separates save/progression state, procedural art helpers, input/UI/gameplay coordination, external world/narrative data, shaders, and test harnesses. Further work should split combat, world generation, inventory, and dialogue into separate scene components before expanding the content substantially. No content was removed to meet the chat attachment limit.
+- `game/systems/rules.gd`: validated data-driven equipment, skills, transactions, contract rewards and settlement rules.
+- `game/systems/expansion.gd`: RPG gameplay integration, dungeon lifecycle, UI, statuses, projectiles, NPCs, weather and audio transitions.
+- `game/systems/streaming.gd`: deterministic nearby chunk loading, unloading, discoveries and persistent enemy state.
+- `game/scripts/state.gd`: save/load, migration, backup and progression.
+- `game/scripts/actor.gd`, `art.gd`: original skeleton motion and procedural geometry.
+- `game/data/rpg.json`, `lands.json`: authored narrative, contracts and equipment definitions.
+- `game/scripts/main.gd`: base game, HUD, combat entry points and land lifecycle.
 
-### Assets and dependencies
+Godot is MIT licensed; its license and third-party notices are included in Credits. No third-party game asset library was imported.
 
-Game geometry, shaders, narrative, and audio are original to this project. Godot is MIT licensed: https://godotengine.org/license/. Android export includes Godot and its dependency notices. No third-party game asset pack was imported.
+
+<!-- /coderabbit-ai-generated:v1 -->

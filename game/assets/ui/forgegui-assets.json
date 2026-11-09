@@ -1,0 +1,30 @@
+[
+  {
+    "file": "keeper0.png",
+    "provider": "ForgeGUI",
+    "artifact_ref": "mcp-artifact:a510769f-bdc2-46a0-a56f-fbd8de95f312:0",
+    "job_id": "a510769f-bdc2-46a0-a56f-fbd8de95f312",
+    "sha256": "d0cce3475fbf8bb6a5d0c340fe98e59620acf830b149360ccb8860c3cacb6c73"
+  },
+  {
+    "file": "keeper1.png",
+    "provider": "ForgeGUI",
+    "artifact_ref": "mcp-artifact:62dc6b63-0b05-4cc0-ad6d-434024542ca9:0",
+    "job_id": "62dc6b63-0b05-4cc0-ad6d-434024542ca9",
+    "sha256": "8b88dc5dc1c8ebec1ae8d135e365f7f73fee6d717277ced569c9ca7eabd98883"
+  },
+  {
+    "file": "keeper2.png",
+    "provider": "ForgeGUI",
+    "artifact_ref": "mcp-artifact:a308b9c3-718f-4f41-8780-af3fdea91631:0",
+    "job_id": "a308b9c3-718f-4f41-8780-af3fdea91631",
+    "sha256": "1e1c5d29239344a44b9f3354c8864b30a575566b29fc3562d165e462bfba62b8"
+  },
+  {
+    "file": "world-map.png",
+    "provider": "ForgeGUI",
+    "artifact_ref": "mcp-artifact:b355ee13-320f-4771-b7fa-cdb484e4369a:0",
+    "job_id": "b355ee13-320f-4771-b7fa-cdb484e4369a",
+    "sha256": "8fda487aef9a04fb3469b45c137670468022108c5690b450394a22eba7089b51"
+  }
+]

@@ -1,4 +1,5 @@
 extends Node
+var rpg:Dictionary = preload("res://systems/rules.gd").new().defaults()
 var land := 0
 var gold := 35
 var level := 1
@@ -18,7 +19,7 @@ var elapsed := 0.0
 var kills := 0
 var save_path = "user://covenant.json"
 func snapshot() -> Dictionary:
-	return {"schema":1,"land":land,"gold":gold,"level":level,"xp":xp,"potions":potions,"ore":ore,"rank":rank,"mercy":mercy,"dominion":dominion,"companion":companion,"quests":quests,"decisions":decisions,"volume":volume,"quality":quality,"touch_scale":touch_scale,"elapsed":elapsed,"kills":kills}
+	return {"rpg":rpg,"schema":1,"land":land,"gold":gold,"level":level,"xp":xp,"potions":potions,"ore":ore,"rank":rank,"mercy":mercy,"dominion":dominion,"companion":companion,"quests":quests,"decisions":decisions,"volume":volume,"quality":quality,"touch_scale":touch_scale,"elapsed":elapsed,"kills":kills}
 func save_game() -> bool:
 	var f = FileAccess.open(save_path + ".tmp", FileAccess.WRITE)
 	if not f: return false
@@ -27,7 +28,7 @@ func save_game() -> bool:
 	f.close()
 	if FileAccess.file_exists(save_path):
 		var previous = JSON.new()
-		if previous.parse(FileAccess.get_file_as_string(save_path)) == OK and previous.data is Dictionary and previous.data.get("schema") == 1:
+		if previous.parse(FileAccess.get_file_as_string(save_path)) == OK and previous.data is Dictionary and previous.data.get("schema") == 1 and valid_save(previous.data):
 			DirAccess.copy_absolute(save_path, save_path + ".bak")
 	return DirAccess.rename_absolute(save_path + ".tmp", save_path) == OK
 func load_game() -> bool:
@@ -40,6 +41,7 @@ func load_game() -> bool:
 		if not d.get("quests") is Array or d.quests.size() != 3: continue
 		if not d.get("decisions") is Array or d.decisions.size() != 3: continue
 		if not valid_save(d): continue
+		if not d.has("rpg"):rpg=preload("res://systems/rules.gd").new().defaults()
 		for key in snapshot():
 			if key != "schema" and d.has(key): set(key, d[key])
 		land = clampi(land, 0, 2)
@@ -54,6 +56,8 @@ func _notification(what:int) -> void:
 	if what == NOTIFICATION_APPLICATION_PAUSED: save_game()
 
 func valid_save(d:Dictionary) -> bool:
+	if not d.get("quests") is Array or d.quests.size()!=3 or not d.get("decisions") is Array or d.decisions.size()!=3:return false
+	if d.has("rpg") and (not d.rpg is Dictionary or not preload("res://systems/rules.gd").new().validate(d.rpg)):return false
 	for key in ["land","gold","level","xp","potions","ore","rank","mercy","dominion","quality","elapsed","kills","volume","touch_scale"]:
 		if not d.has(key) or not (d[key] is float or d[key] is int) or not is_finite(float(d[key])) or d[key]<0: return false
 	if d.level<1 or d.land>2 or d.quality>1 or d.volume>1 or d.touch_scale<1 or d.touch_scale>1.2: return false

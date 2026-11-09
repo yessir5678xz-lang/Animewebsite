@@ -43,6 +43,8 @@ func run() -> void:
 	for path in ["user://test-covenant.json","user://test-covenant.json.bak","user://test-covenant.json.tmp"]:DirAccess.remove_absolute(path)
 	game.music.stop()
 	game.effects.stop()
+	game.expansion.battle.stop()
+	game.expansion.foot.stop()
 	await create_timer(.2).timeout
 	game.queue_free()
 	await process_frame

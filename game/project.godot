@@ -3,7 +3,7 @@ config_version=5
 config/quit_on_go_back=false
 config/name="3LANDS OF DEATH, BEAUTY & PROSPERITY"
 run/main_scene="res://scenes/main.tscn"
-config/version="0.1.0"
+config/version="0.2.0"
 config/icon="res://assets/ui/icon.svg"
 [autoload]
 State="*res://scripts/state.gd"

@@ -1,0 +1,334 @@
+{
+  "weapons": {
+    "sword": {
+      "name": "Covenant sword",
+      "damage": 15,
+      "reach": 3.6,
+      "speed": 0.36,
+      "stamina": 11,
+      "effect": "slash",
+      "cost": 20,
+      "rarity": "Common"
+    },
+    "greatsword": {
+      "name": "Mourning greatsword",
+      "damage": 32,
+      "reach": 4.6,
+      "speed": 0.9,
+      "stamina": 27,
+      "effect": "cleave",
+      "cost": 28,
+      "rarity": "Common"
+    },
+    "daggers": {
+      "name": "Glass daggers",
+      "damage": 9,
+      "reach": 2.8,
+      "speed": 0.2,
+      "stamina": 7,
+      "effect": "poison",
+      "cost": 36,
+      "rarity": "Common"
+    },
+    "spear": {
+      "name": "Dawn spear",
+      "damage": 21,
+      "reach": 6,
+      "speed": 0.55,
+      "stamina": 15,
+      "effect": "thrust",
+      "cost": 44,
+      "rarity": "Uncommon"
+    },
+    "axe": {
+      "name": "Grave axe",
+      "damage": 26,
+      "reach": 3.8,
+      "speed": 0.7,
+      "stamina": 21,
+      "effect": "stagger",
+      "cost": 52,
+      "rarity": "Uncommon"
+    },
+    "bow": {
+      "name": "Willow longbow",
+      "damage": 18,
+      "reach": 23,
+      "speed": 0.7,
+      "stamina": 13,
+      "effect": "arrow",
+      "cost": 60,
+      "rarity": "Uncommon"
+    },
+    "crossbow": {
+      "name": "Guild crossbow",
+      "damage": 30,
+      "reach": 27,
+      "speed": 1.2,
+      "stamina": 20,
+      "effect": "bolt",
+      "cost": 68,
+      "rarity": "Rare"
+    },
+    "staff": {
+      "name": "Aether staff",
+      "damage": 22,
+      "reach": 20,
+      "speed": 0.65,
+      "stamina": 8,
+      "effect": "arcane",
+      "cost": 76,
+      "rarity": "Rare"
+    },
+    "dual": {
+      "name": "Twin sabers",
+      "damage": 11,
+      "reach": 3.3,
+      "speed": 0.28,
+      "stamina": 9,
+      "effect": "dual",
+      "cost": 84,
+      "rarity": "Rare"
+    },
+    "relic": {
+      "name": "Ember relic",
+      "damage": 23,
+      "reach": 4,
+      "speed": 0.6,
+      "stamina": 18,
+      "effect": "fire",
+      "cost": 92,
+      "rarity": "Epic"
+    }
+  },
+  "skills": [
+    {
+      "id": "vigor",
+      "name": "Vigor",
+      "tree": "warrior",
+      "cost": 1,
+      "description": "Maximum health +25 per rank."
+    },
+    {
+      "id": "force",
+      "name": "Force",
+      "tree": "warrior",
+      "cost": 1,
+      "description": "Melee damage +12% per rank."
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "tree": "mage",
+      "cost": 1,
+      "description": "Spell damage +20% per rank."
+    },
+    {
+      "id": "siphon",
+      "name": "Siphon",
+      "tree": "mage",
+      "cost": 2,
+      "description": "Recover 3 health per kill per rank."
+    },
+    {
+      "id": "shadow",
+      "name": "Shadowstep",
+      "tree": "assassin",
+      "cost": 1,
+      "description": "Dodge costs 3 less stamina per rank."
+    },
+    {
+      "id": "precision",
+      "name": "Precision",
+      "tree": "ranger",
+      "cost": 1,
+      "description": "Ranged damage +15% per rank."
+    },
+    {
+      "id": "bargain",
+      "name": "Silver Tongue",
+      "tree": "diplomat",
+      "cost": 1,
+      "description": "Trading discounts and better commodity sales."
+    },
+    {
+      "id": "ward",
+      "name": "Ward",
+      "tree": "warrior",
+      "cost": 2,
+      "description": "Incoming damage reduced by 8% per rank."
+    }
+  ],
+  "quests": [
+    {
+      "id": "bell_names",
+      "land": 0,
+      "name": "Names Under Ash",
+      "giver": "Mara",
+      "description": "The Regent burned the funeral records. Reclaim six names by laying his soldiers to rest.",
+      "kind": "kill",
+      "goal": 6,
+      "gold": 50,
+      "faction": "Bellkeepers"
+    },
+    {
+      "id": "mara_ore",
+      "land": 0,
+      "name": "A Bell That Remembers",
+      "giver": "Mara",
+      "description": "Bring five Covenant ore to cast a bell that remembers the erased.",
+      "kind": "ore",
+      "goal": 5,
+      "gold": 65,
+      "faction": "Bellkeepers"
+    },
+    {
+      "id": "crypt",
+      "land": 0,
+      "name": "The Ninth Funeral",
+      "giver": "Archivist Sen",
+      "description": "Below the northern ruins, one funeral never ended. Defeat the crypt guardian.",
+      "kind": "dungeon",
+      "goal": 1,
+      "gold": 100,
+      "faction": "Bellkeepers"
+    },
+    {
+      "id": "witness",
+      "land": 0,
+      "name": "The Unburied Witness",
+      "giver": "Archivist Sen",
+      "description": "Sen hid from the king for eighty years. Listen to his testimony.",
+      "kind": "testimony",
+      "goal": 1,
+      "gold": 25,
+      "faction": "Bellkeepers"
+    },
+    {
+      "id": "garden",
+      "land": 1,
+      "name": "The Cost of Spring",
+      "giver": "Ilyra",
+      "description": "Protect the sap collectors from seven hostile echoes.",
+      "kind": "kill",
+      "goal": 7,
+      "gold": 65,
+      "faction": "Verdant Court"
+    },
+    {
+      "id": "seed",
+      "land": 1,
+      "name": "Seeds for the Exiles",
+      "giver": "Thalen",
+      "description": "Collect six ore crystals to shelter the children who cannot dream.",
+      "kind": "ore",
+      "goal": 6,
+      "gold": 75,
+      "faction": "Verdant Court"
+    },
+    {
+      "id": "roots",
+      "land": 1,
+      "name": "The Root Below",
+      "giver": "Thalen",
+      "description": "Follow the temple stairs. The ancient root guardian feeds on the valley.",
+      "kind": "dungeon",
+      "goal": 1,
+      "gold": 110,
+      "faction": "Verdant Court"
+    },
+    {
+      "id": "dream",
+      "land": 1,
+      "name": "A Borrowed Childhood",
+      "giver": "Ilyra",
+      "description": "Discover why Ilyra remembers a childhood that belonged to Mara.",
+      "kind": "testimony",
+      "goal": 1,
+      "gold": 35,
+      "faction": "Verdant Court"
+    },
+    {
+      "id": "caravan",
+      "land": 2,
+      "name": "The Last Honest Caravan",
+      "giver": "Cassian",
+      "description": "Drive eight brigands from the trade road.",
+      "kind": "kill",
+      "goal": 8,
+      "gold": 80,
+      "faction": "Free Guilds"
+    },
+    {
+      "id": "mint",
+      "land": 2,
+      "name": "Metal Without Chains",
+      "giver": "Engineer Ves",
+      "description": "Bring eight ore for a mint that cannot print stolen years.",
+      "kind": "ore",
+      "goal": 8,
+      "gold": 95,
+      "faction": "Free Guilds"
+    },
+    {
+      "id": "engine",
+      "land": 2,
+      "name": "Interest on the Dead",
+      "giver": "Engineer Ves",
+      "description": "Under the vaults, the debt engine still calculates the price of a life.",
+      "kind": "dungeon",
+      "goal": 1,
+      "gold": 125,
+      "faction": "Free Guilds"
+    },
+    {
+      "id": "ledger",
+      "land": 2,
+      "name": "The Red Ledger",
+      "giver": "Cassian",
+      "description": "Hear Cassian confess how the three kingdoms made their bargain.",
+      "kind": "testimony",
+      "goal": 1,
+      "gold": 40,
+      "faction": "Free Guilds"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Archivist Sen",
+      "land": 0,
+      "pos": [
+        12,
+        -9
+      ],
+      "faction": "Bellkeepers",
+      "history": "Sen was the king\u2019s chronicler. When ordered to erase his own daughter, he hid the true ledger inside a funeral bell.",
+      "secret": "The first Covenant was signed willingly. Mara herself taught the Regent how to bind names.",
+      "portrait": "sen"
+    },
+    {
+      "name": "Thalen",
+      "land": 1,
+      "pos": [
+        12,
+        -9
+      ],
+      "faction": "Verdant Court",
+      "history": "Thalen tended the gardens until his own child was born without dreams. Now he shelters the dreamless in the roots.",
+      "secret": "Every crystal leaf contains a memory stolen from Vesper. Ilyra remembers Mara\u2019s childhood because the garden gave it to her.",
+      "portrait": "thalen"
+    },
+    {
+      "name": "Engineer Ves",
+      "land": 2,
+      "pos": [
+        12,
+        -9
+      ],
+      "faction": "Free Guilds",
+      "history": "Ves designed the Golden Engine as a hospital. The council converted it into a machine for collecting years as tax.",
+      "secret": "Cassian\u2019s ledger proves every council house owes its wealth to the dead. The debt can be canceled if all shards agree.",
+      "portrait": "ves"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 extends Node3D
 const ArtFactory = preload("res://scripts/art.gd")
+var expansion:Node
 var lands:Array
 var world:Node3D
 var hero:Node3D
@@ -33,6 +34,8 @@ var auto_timer := 0.0
 var combo := 0
 var message_timer := 0.0
 var map_open := false
+var camera_finger := -1
+var action_grid:GridContainer
 var touch_buttons:Array = []
 func _ready() -> void:
 	lands=JSON.parse_string(FileAccess.get_file_as_string("res://data/lands.json"))
@@ -41,7 +44,10 @@ func _ready() -> void:
 	setup_ui()
 	music=AudioStreamPlayer.new();add_child(music)
 	effects=AudioStreamPlayer.new();add_child(effects)
+	expansion=Node.new();expansion.set_script(load("res://systems/expansion.gd"));add_child(expansion)
 	load_land(State.land)
+	expansion.restore_resume()
+	action_grid.position.y=420 if State.rpg.controls=="raised" else 530
 	intro()
 func button(text:String,call:Callable,parent:Node=null) -> Button:
 	if parent == null: parent = body
@@ -58,10 +64,10 @@ func setup_ui() -> void:
 	stats=Label.new();stats.position=Vector2(26,18);root.add_child(stats)
 	objective=Label.new();objective.position=Vector2(26,78);root.add_child(objective)
 	notice=Label.new();notice.position=Vector2(320,600);notice.size=Vector2(650,60);notice.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;root.add_child(notice)
-	var menu=HBoxContainer.new();menu.position=Vector2(815,18);root.add_child(menu)
-	button("JOURNAL",journal,menu);button("PACK",inventory,menu);button("ATLAS",atlas,menu);button("☰",settings,menu)
+	var menu=HBoxContainer.new();menu.position=Vector2(690,18);root.add_child(menu)
+	button("JOURNAL",journal,menu);button("PACK",inventory,menu);button("CODEX",func():expansion.hub(),menu);button("ATLAS",atlas,menu);button("☰",settings,menu)
 	var movement=Label.new();movement.text="WASD / drag left side to move\nJ attack · K heavy · L spell · Space evade\nB block · E interact · H heal";movement.position=Vector2(26,610);root.add_child(movement)
-	var actions=GridContainer.new();actions.columns=3;actions.position=Vector2(880,530);root.add_child(actions)
+	var actions=GridContainer.new();action_grid=actions;actions.columns=3;actions.position=Vector2(880,530);root.add_child(actions)
 	for entry in [["STRIKE",func(): attack(false)],["HEAVY",func(): attack(true)],["SPELL",spell],["EVADE",dodge],["SPEAK",interact],["HEAL",heal]]:
 		var b=button(entry[0],entry[1],actions);b.custom_minimum_size=Vector2(115,57);touch_buttons.append(b)
 	var guard=button("HOLD GUARD",func(): pass,actions);guard.button_down.connect(func(): blocking=true;block_time=0);guard.button_up.connect(func(): blocking=false)
@@ -79,6 +85,7 @@ func intro() -> void:
 	open_panel("3LANDS\nDEATH, BEAUTY & PROSPERITY","THE BROKEN COVENANT · Chapter One\n\nThree kingdoms. One stolen future. You are the Wayfarer, the only soul whose name the Covenant cannot erase. Find each keeper, defeat the three wardens, and decide who inherits their power.\n\nExplore the frontier. Speak to the keeper by the turquoise lantern. Collect ore and defeat wanderers to strengthen your blade. Red circles warn of incoming attacks; dodge or time your guard.")
 	button("CONTINUE THE JOURNEY",close)
 func load_land(index:int) -> void:
+	if is_instance_valid(world) and is_instance_valid(expansion): expansion.capture()
 	State.land=index
 	if is_instance_valid(world): remove_child(world);world.queue_free()
 	enemies.clear();pickups.clear()
@@ -125,22 +132,23 @@ func load_land(index:int) -> void:
 		var pos=Vector3(rng.randf_range(-45,45),.4,rng.randf_range(-85,25))
 		var item=ArtFactory.cone(world,pos,.55,1.1,accent)
 		pickups.append(item)
-	hp=100+State.level*10;mana=100;stamina=100
+	hp=expansion.rules.max_health();mana=100;stamina=100
 	music.stop()
 	music.stream=load("res://assets/audio/land%d.wav"%index);music.stream.loop_mode=AudioStreamWAV.LOOP_FORWARD;music.stream.loop_end=int(music.stream.get_length()*music.stream.mix_rate)
 	music.volume_db=linear_to_db(maxf(.001,State.volume));music.play()
 	decorate(index,base,accent)
+	expansion.land_ready()
 	State.save_game()
 func spawn_enemy(pos:Vector3,boss:bool) -> void:
 	var node=ArtFactory.person(world,Color(lands[State.land].accent).darkened(.25),2.2 if boss else 1.0);node.position=pos
 	var health=260.0+State.land*90 if boss else 45.0+State.land*15
 	var ring=ArtFactory.cone(node,Vector3(0,.08,0),2.0,.08,Color("ef514d"));ring.visible=false
-	enemies.append({"node":node,"hp":health,"max":health,"boss":boss,"clock":0.0,"windup":0.0,"ring":ring,"label":ArtFactory.label(node,"",Vector3(0,3,0))})
+	enemies.append({"node":node,"hp":health,"max":health,"boss":boss,"stagger":0.0,"status":"none","status_time":0.0,"tick":0.0,"phase_timer":0.0,"clock":0.0,"windup":0.0,"ring":ring,"label":ArtFactory.label(node,"",Vector3(0,3,0))})
 func _process(delta:float) -> void:
 	if panel.visible: return
 	time+=delta;State.elapsed+=delta;auto_timer+=delta;message_timer-=delta
 	if message_timer<0: notice.text=""
-	if auto_timer>25: auto_timer=0;State.save_game()
+	if auto_timer>25: auto_timer=0;expansion.capture();State.save_game()
 	cooldown=maxf(0,cooldown-delta);invulnerable=maxf(0,invulnerable-delta);block_time+=delta
 	stamina=minf(100,stamina+delta*19);mana=minf(100,mana+delta*7)
 	var move=stick
@@ -149,15 +157,16 @@ func _process(delta:float) -> void:
 	if Input.is_physical_key_pressed(KEY_A): move.x-=1
 	if Input.is_physical_key_pressed(KEY_D): move.x+=1
 	if move.length()>1: move=move.normalized()
-	var motion=Vector3(move.x,0,move.y)
+	var motion=Vector3(move.x,0,move.y).rotated(Vector3.UP,State.rpg.camera)
 	if motion.length()>.1:
-		direction=motion.normalized();hero.position+=motion*delta*(3.0 if blocking else 7.0);hero.rotation.y=atan2(direction.x,direction.z)
+		direction=motion.normalized();var next=hero.position+motion*delta*(3.0 if blocking else 7.0)
+		if expansion.valid_position(next):hero.position=next;hero.rotation.y=atan2(direction.x,direction.z)
 		hero.position.y=abs(sin(time*12))*.08
-	hero.position.x=clampf(hero.position.x,-88,88);hero.position.z=clampf(hero.position.z,-88,88)
+
 	camera.position=hero.position+Vector3(0,23,19);camera.look_at(hero.position)
 	sun.light_energy=.65+.35*sin(State.elapsed/90)
 	ally.visible=State.companion
-	if State.companion: ally.position=ally.position.lerp(hero.position+Vector3(-2,0,2),delta*3)
+	if State.companion and State.rpg.companion_order!="stay": ally.position=ally.position.lerp(hero.position+Vector3(-2,0,2),delta*3)
 	for item in pickups.duplicate():
 		item.rotation.y+=delta
 		if item.position.distance_to(hero.position)<1.6:
@@ -173,12 +182,13 @@ func _process(delta:float) -> void:
 			if e.windup<=0:
 				e.ring.visible=false
 				if dist<(5.5 if e.boss else 2.8): hurt(28 if e.boss else 12)
+		elif e.get("stagger",0)>0:pass
 		elif dist>(4.5 if e.boss else 2):
 			n.position+=n.position.direction_to(hero.position)*delta*(2.7 if e.boss else 3.5)
 		elif e.clock>(1.5 if e.hp<e.max/2 else 2.5):
-			e.clock=0;e.windup=.65;e.ring.visible=true
-		if State.companion and e.clock<delta and dist<7: damage(e,8)
-	stats.text="%s\nHP %d/%d    STAMINA %d    AETHER %d    LV %d    GOLD %d"%[lands[State.land].region,hp,100+State.level*10,stamina,mana,State.level,State.gold]
+			e.clock=0;e.windup=.65;e.ring.visible=true;n.animate_attack("cleave" if e.boss else "slash")
+		if State.companion and State.rpg.companion_order!="stay" and e.clock<delta and dist<7: damage(e,8+minf(State.rpg.relation,20))
+	stats.text="%s\nHP %d/%d    STAMINA %d    AETHER %d    LV %d    GOLD %d"%[lands[State.land].region,hp,expansion.rules.max_health(),stamina,mana,State.level,State.gold]
 	objective.text="COVENANT %d / 3   •   %s"%[State.quests.count(2),"Speak to the keeper at camp" if State.quests[State.land]==0 else ("Defeat the warden • north along the road" if State.quests[State.land]==1 else "Shard reclaimed • travel using the Atlas")]
 func say(text:String) -> void: notice.text=text;message_timer=4
 func nearest(max_distance:float) -> Dictionary:
@@ -188,16 +198,13 @@ func nearest(max_distance:float) -> Dictionary:
 		if d<best: best=d;target=e
 	return target
 func attack(heavy:bool) -> void:
-	if panel.visible or cooldown>0 or stamina<(25 if heavy else 10): return
-	stamina-=25 if heavy else 10;cooldown=.8 if heavy else .3;combo=(combo+1)%3
-	var target=nearest(4.5 if heavy else 3.5)
-	var tween=create_tween();tween.tween_property(hero,"rotation:y",hero.rotation.y+TAU,.25)
-	if not target.is_empty(): damage(target,(28 if heavy else 12)+State.rank*5+State.level*2+combo*3)
+	expansion.strike(heavy)
 func damage(e:Dictionary,amount:float) -> void:
 	if not enemies.has(e): return
 	effects.stream=load("res://assets/audio/impact.wav");effects.play()
 	e.hp-=amount
 	if e.hp<=0:
+		expansion.on_kill(e.boss)
 		State.gold+=55 if e.boss else 8;State.reward(100 if e.boss else 18);State.kills+=1
 		if e.boss:
 			State.quests[State.land]=2;State.ore+=5;say("WARDEN FALLEN • Covenant shard reclaimed");State.save_game()
@@ -205,13 +212,15 @@ func damage(e:Dictionary,amount:float) -> void:
 		e.node.queue_free();enemies.erase(e)
 func spell() -> void:
 	if panel.visible or mana<30 or cooldown>0: return
-	mana-=30;cooldown=.7
-	var orb=ArtFactory.cone(world,hero.position+Vector3(0,.15,0),7,.2,Color("78e7e1"));var tween=create_tween();tween.tween_property(orb,"scale",Vector3.ZERO,.5);tween.tween_callback(orb.queue_free)
+	mana-=30;cooldown=.7;effects.stream=load("res://assets/audio/spell.wav");effects.play()
+	var orb=ArtFactory.cone(world,hero.position+Vector3(0,.15,0),7,.2,{"fire":Color("f78d47"),"frost":Color("78e7e1"),"poison":Color("86ca66")}[State.rpg.spell]);var tween=create_tween();tween.tween_property(orb,"scale",Vector3.ZERO,.5);tween.tween_callback(orb.queue_free)
 	for e in enemies.duplicate():
-		if e.node.position.distance_to(hero.position)<8: damage(e,30+State.level*4)
+		if e.node.position.distance_to(hero.position)<8: damage(e,(30+State.level*4)*(1+expansion.rules.rank("focus")*.2))
+		if enemies.has(e) and e.node.position.distance_to(hero.position)<8:expansion.status(e,State.rpg.spell)
 func dodge() -> void:
-	if panel.visible or stamina<22: return
-	stamina-=22;invulnerable=.5;hero.position+=direction*4
+	if panel.visible or stamina<22-expansion.rules.rank("shadow")*3: return
+	stamina-=22-expansion.rules.rank("shadow")*3;invulnerable=.5;var next=hero.position+direction*4
+	if expansion.valid_position(next):hero.position=next
 func hurt(amount:float) -> void:
 	if invulnerable>0:return
 	if blocking and stamina>15:
@@ -221,16 +230,20 @@ func hurt(amount:float) -> void:
 			if not e.is_empty(): damage(e,22)
 			return
 		amount*=.2
+	amount*=maxf(.15,1.0-expansion.rules.rank("ward")*.08-State.rpg.armor*.05-State.rpg.settlement.fort*.02-(.1 if State.companion and State.rpg.companion_order=="guard" else 0.0))
 	hp-=amount;invulnerable=.45
 	if hp<=0:
-		State.gold=maxi(0,State.gold-15);hero.position=Vector3(0,0,4);hp=100+State.level*10;say("Returned to camp • 15 gold lost")
+		State.gold=maxi(0,State.gold-15);hero.position=Vector3(0,0,4);hp=expansion.rules.max_health();say("Returned to camp • 15 gold lost")
 func heal() -> void:
 	if panel.visible or State.potions<=0:return
-	State.potions-=1;hp=minf(100+State.level*10,hp+65);say("Restored 65 health")
+	State.potions-=1;hp=minf(expansion.rules.max_health(),hp+65);say("Restored 65 health")
 func interact() -> void:
+	if panel.visible:return
+	if expansion.interact():return
 	if hero.position.distance_to(Vector3(-6,0,-4))>9: say("Find the keeper at the camp lantern");return
 	var data=lands[State.land]
 	open_panel(data.keeper,data.story+"\n\n"+(data.epilogue if State.quests[State.land]==2 else "The warden waits at the end of the northern road."))
+	show_portrait(State.land)
 	if State.decisions[State.land]==0:
 		button(data.choice_a,func(): choose(1));button(data.choice_b,func(): choose(2))
 	button("Trade and forge",inventory)
@@ -239,7 +252,9 @@ func interact() -> void:
 		else: say("You need 30 gold"))
 	button("Leave",close)
 func choose(value:int) -> void:
+	if State.decisions[State.land]!=0:return
 	State.decisions[State.land]=value
+	State.rpg.reputation[["Bellkeepers","Verdant Court","Free Guilds"][State.land]]+=10 if value==1 else -10
 	if value==1:State.mercy+=1
 	else:State.dominion+=1
 	State.quests[State.land]=maxi(1,State.quests[State.land]);State.save_game();close()
@@ -250,7 +265,7 @@ func inventory() -> void:
 			if State.gold>=12:State.gold-=12;State.potions+=1;inventory())
 		button("Forge blade • 3 ore + 25 gold",func():
 			if State.ore>=3 and State.gold>=25:State.ore-=3;State.gold-=25;State.rank+=1;inventory())
-		button("Rest at camp • restore health and aether",func(): hp=100+State.level*10;mana=100;State.save_game();close())
+		button("Rest at camp • restore health and aether",func(): hp=expansion.rules.max_health();mana=100;State.save_game();close())
 	button("Return",close)
 func journal() -> void:
 	var text="THE BROKEN COVENANT\n"
@@ -261,14 +276,18 @@ func journal() -> void:
 	open_panel("CHRONICLE",text);button("Return",close)
 func atlas() -> void:
 	open_panel("ATLAS OF THE THREE LANDS","The old roads bind every kingdom. Travel returns you to the local camp. The wardens and your choices persist; frontier enemies and ore replenish.")
+	if ResourceLoader.exists("res://assets/ui/world-map.png"):
+		var map=TextureRect.new();map.texture=load("res://assets/ui/world-map.png");map.custom_minimum_size=Vector2(650,300);map.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;map.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;body.add_child(map)
 	for i in range(3): button(lands[i].name+"  /  "+lands[i].region,func():load_land(i);close())
 	button("Return",close)
 func settings() -> void:
 	open_panel("SYSTEM","Manual saves and autosaves use the device's private app storage. A backup is kept for recovery.\nGraphics presets change shadow rendering; touch sizing changes action buttons.")
-	button("Save journey",func():say("Journey saved" if State.save_game() else "Save failed");close())
-	button("Load saved journey",func():State.load_game();load_land(State.land);close())
-	button("Shadows: "+("ON" if State.quality else "OFF"),func():State.quality=1-State.quality;sun.shadow_enabled=State.quality>0;settings())
-	button("Music: "+("ON" if State.volume>0 else "OFF"),func():State.volume=0.0 if State.volume>0 else .45;music.volume_db=linear_to_db(maxf(.001,State.volume));settings())
+	button("Save journey",func():expansion.capture();say("Journey saved" if State.save_game() else "Save failed");close())
+	button("Load saved journey",reload_save)
+	button("Graphics presets",graphics_settings)
+	button("Control layout: "+State.rpg.controls,func():State.rpg.controls="raised" if State.rpg.controls=="standard" else "standard";action_grid.position.y=420 if State.rpg.controls=="raised" else 530;settings())
+	button("Shadows: "+("ON" if sun.shadow_enabled else "OFF"),func():State.rpg.preset=0 if sun.shadow_enabled else 1;expansion.apply_quality();settings())
+	button("Music: "+("ON" if State.volume>0 else "OFF"),func():State.volume=0.0 if State.volume>0 else .45;music.volume_db=linear_to_db(maxf(.001,State.volume));expansion.battle.volume_db=-60;settings())
 	button("Credits and licenses",credits)
 	button("Touch controls: "+("LARGE" if State.touch_scale>1 else "NORMAL"), resize_controls)
 	button("Return",close)
@@ -282,15 +301,22 @@ func _input(event:InputEvent) -> void:
 			KEY_SPACE: dodge()
 			KEY_E: interact()
 			KEY_H: heal()
+			KEY_Q: expansion.locked=nearest(25) if expansion.locked.is_empty() else {}
+			KEY_R: State.rpg.camera+=PI/4
 			KEY_B: blocking=true;block_time=0
 	if event is InputEventKey and not event.pressed and event.physical_keycode==KEY_B: blocking=false
 	if event is InputEventScreenTouch:
 		if event.pressed and event.position.x<450 and not panel.visible:stick_id=event.index;stick_start=event.position
+		elif event.pressed and event.position.x>450 and event.position.y>110 and event.position.y<480 and not panel.visible:camera_finger=event.index
 		elif not event.pressed and event.index==stick_id:stick_id=-1;stick=Vector2.ZERO
+		if not event.pressed and event.index==camera_finger:camera_finger=-1
+	if event is InputEventScreenDrag and event.index==camera_finger:State.rpg.camera-=event.relative.x*.008
 	if event is InputEventScreenDrag and event.index==stick_id:stick=(event.position-stick_start).limit_length(70)/70
 func _notification(what:int) -> void:
 	if what==NOTIFICATION_WM_GO_BACK_REQUEST: settings()
-	if what==NOTIFICATION_WM_CLOSE_REQUEST: State.save_game();get_tree().quit()
+	if what==NOTIFICATION_WM_CLOSE_REQUEST: shutdown()
+	if what==NOTIFICATION_APPLICATION_PAUSED and is_instance_valid(expansion):expansion.capture();State.save_game();stick=Vector2.ZERO;blocking=false;music.stream_paused=true
+	if what==NOTIFICATION_APPLICATION_RESUMED and is_instance_valid(music):music.stream_paused=false
 
 func resize_controls() -> void:
 	State.touch_scale=1.2 if State.touch_scale==1 else 1.0
@@ -329,5 +355,28 @@ func _exit_tree() -> void:
 	if is_instance_valid(effects): effects.stop()
 
 func credits() -> void:
-	open_panel("CREDITS", "3LANDS OF DEATH, BEAUTY & PROSPERITY\nOriginal procedural assets, narrative, and synthesized music.\nBuilt with Godot 4.7.2 (MIT).\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt"))
+	open_panel("CREDITS", "3LANDS OF DEATH, BEAUTY & PROSPERITY\nOriginal procedural assets, narrative, and synthesized music. Keeper portraits and world atlas generated through ForgeGUI; commercial-use terms: forgegui.com/terms.\nBuilt with Godot 4.7.2 (MIT).\n\n" + FileAccess.get_file_as_string("res://data/GODOT_LICENSE.txt") + "\n" + FileAccess.get_file_as_string("res://data/GODOT_COPYRIGHT.txt"))
 	button("Return", settings)
+
+func reload_save() -> void:
+	# Avoid capture during load overwriting the loaded world and resume state.
+	if not State.load_game():say("No valid save available");return
+	remove_child(world);world.queue_free();world=null
+	load_land(State.land);expansion.restore_resume();close()
+func show_portrait(index:int) -> void:
+	var path="res://assets/ui/keeper%d.png"%index
+	if ResourceLoader.exists(path):
+		var image=TextureRect.new();image.texture=load(path);image.custom_minimum_size=Vector2(160,160);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;body.add_child(image);body.move_child(image,1)
+func graphics_settings() -> void:
+	open_panel("GRAPHICS & CAMERA","Presets change rendering resolution, shadows, anti-aliasing, rain and local lights. Adaptive mode lowers the preset after sustained slow frames.")
+	for i in range(4):button(["LOW","MEDIUM","HIGH","ULTRA"][i],func():State.rpg.preset=i;expansion.apply_quality();graphics_settings())
+	button("Adaptive: "+str(State.rpg.adaptive),func():State.rpg.adaptive=not State.rpg.adaptive;graphics_settings())
+	button("Rotate camera",func():State.rpg.camera+=PI/4;close())
+	button("Lock on / release",func():expansion.locked=nearest(25) if expansion.locked.is_empty() else {};close())
+	button("Return",settings)
+
+func shutdown() -> void:
+	expansion.capture();State.save_game();set_process(false)
+	music.stop();effects.stop();expansion.battle.stop();expansion.foot.stop()
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit()
